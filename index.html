@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#188BD6">
+  <meta name="description" content="Saferry - Travel Safe. Arrive Safe. Offline-first travel reference for Bantayan Island.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Saferry">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css?v=20">
+  <title>Saferry</title>
+</head>
+<body>
+<div class="app">
+  <header class="app-header" id="homeHeader">
+    <button class="icon-button" id="menuButton" type="button" aria-label="Open menu">
+      <span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+    <div class="brand-title">Saferry</div>
+    <div class="header-spacer" aria-hidden="true"></div>
+  </header>
+
+  <div class="menu-overlay" id="menuOverlay" hidden></div>
+  <aside class="side-menu" id="sideMenu" aria-label="Saferry menu" aria-hidden="true">
+    <div class="side-menu-head">
+      <div>Saferry</div>
+      <button class="menu-close" id="menuClose" type="button" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="side-menu-body">
+      <button class="menu-link" data-menu-route="home" type="button"><span class="menu-link-icon">⌂</span><span>Home</span></button>
+      <button class="menu-link" data-menu-route="schedules" type="button"><span class="menu-link-icon">▣</span><span>Ferry Schedules</span></button>
+      <button class="menu-link" data-menu-route="safety" type="button"><span class="menu-link-icon">◈</span><span>Safety Tips</span></button>
+      <button class="menu-link" data-menu-route="emergency" type="button"><span class="menu-link-icon">☎</span><span>Emergency Contacts</span></button>
+      <button class="menu-link" data-menu-route="about" type="button"><span class="menu-link-icon">ⓘ</span><span>About &amp; Info</span></button>
+    </div>
+    <div class="side-menu-foot">Offline-first travel companion for Bantayan Island.</div>
+  </aside>
+
+  <main id="appContent"></main>
+
+  <nav class="bottom-nav" aria-label="Main navigation">
+    <button class="nav-item active" data-route="home" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 10.5 8.5-7 8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg>
+      <small>Home</small>
+    </button>
+    <button class="nav-item" data-route="schedules" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg>
+      <small>Schedules</small>
+    </button>
+    <button class="nav-item" data-route="safety" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+      <small>Safety</small>
+    </button>
+    <button class="nav-item" data-route="emergency" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 4.8c.7-.7 1.7-.9 2.6-.5l2 1a2 2 0 0 1 .9 2.8l-1 1.7a15.4 15.4 0 0 0 3.1 3.1l1.7-1a2 2 0 0 1 2.8.9l1 2c.4.9.2 1.9-.5 2.6l-1.1 1.1c-.8.8-2 1.1-3.1.7A17.2 17.2 0 0 1 5.1 9c-.4-1.1-.1-2.3.7-3.1l.8-1.1Z"/></svg>
+      <small>Emergency</small>
+    </button>
+  </nav>
+</div>
+
+<script src="script.js?v=20"></script>
+</body>
+</html>
