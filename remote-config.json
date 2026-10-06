@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "provider": "github-api",
+  "repository": "anthonyjamesgigtenta11-ai/saferry-app",
+  "branch": "main",
+  "manifestPath": "data-update-manifest.json",
+  "refreshIntervalMinutes": 60,
+  "note": "Saferry reads the public GitHub repository through GitHub's Contents API and stores the latest successful copy for offline use."
+}

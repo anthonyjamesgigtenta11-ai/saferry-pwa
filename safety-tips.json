@@ -1,0 +1,29 @@
+{
+  "status": "reference",
+  "lastChecked": "2026-10-06",
+  "note": "Safety guidance is based on Philippine maritime, public-health, and local disaster-risk guidance. Always follow current instructions from ferry operators, local authorities, and official weather advisories.",
+  "seaTravel": [
+    ["Plan Ahead","Know the trip schedule, buy a ticket early when possible, and arrive at the port early."],
+    ["Board Authorized Vessels","Use registered/authorized passenger vessels and follow port and crew instructions."],
+    ["Wear Your Life Jacket","Follow the vessel's life-jacket instructions and wear or keep it ready as directed by the crew."],
+    ["Respect Passenger Capacity","Do not board an overcrowded vessel or a trip that exceeds its authorized passenger capacity."],
+    ["Check Your Passenger Details","Make sure your ticket and passenger-manifest details are correct before boarding."],
+    ["Follow Weather & Port Advisories","Do not rely only on Saferry. Follow current operator, port, Coast Guard, and weather advisories." ]
+  ],
+  "beachSafety": [
+    ["Choose a Safe Area","Use designated or monitored swimming areas and check warning signs and local safety notices."],
+    ["Look for Lifeguards","Prefer beaches with lifeguards and readily available life-saving equipment."],
+    ["Stay With Others","Do not swim alone; adults should accompany children and vulnerable swimmers."],
+    ["Avoid Hazard Areas","Stay away from marked danger areas and zones used by anchored or moving watercraft."],
+    ["Do Not Swim Impaired","Avoid swimming when drunk or otherwise unable to respond safely to changing conditions."],
+    ["Know the Local Emergency Number","Keep 911 and relevant local emergency contacts accessible before entering the water."
+  ]
+  ],
+  "sources": [
+    {"name":"MARINA passenger safety reminders","url":"https://marina.gov.ph/2025/10/30/paalala-sa-mga-pasahero-ng-barko-at-bangka-ngayong-undas-2025/"},
+    {"name":"MARINA 2026 life-jacket advisory","url":"https://marina.gov.ph/wp-content/uploads/2026/02/MARINA-Advisory-No.2026-04.pdf"},
+    {"name":"MARINA 2026 passenger ticket/manifest guidance","url":"https://marina.gov.ph/2026/09/23/panoorin-ano-nga-ba-ang-no-ticket-no-boarding-policy/"},
+    {"name":"Iloilo CDRRMO beachgoer reminders","url":"https://cdrrmo.iloilocity.gov.ph/resources/disaster-preparedness/pahanumdom-sa-mga-beachgoers/"},
+    {"name":"Philippine sanitation rules for natural bathing places","url":"https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/10/42156"}
+  ]
+}

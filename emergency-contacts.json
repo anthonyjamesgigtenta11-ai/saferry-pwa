@@ -1,0 +1,14 @@
+{
+  "status": "reference",
+  "lastChecked": "2026-10-06",
+  "note": "For immediate emergencies, call 911 first. Contact details can change and should be reconfirmed with the relevant agency before public deployment.",
+  "contacts": [
+    {"name":"National Emergency Hotline","number":"911","type":"rescue","source":"Philippine Government Emergency Hotlines","sourceUrl":"https://ehotlines.e.gov.ph/"},
+    {"name":"PNP Emergency Hotline","number":"117","type":"police","source":"Philippine Government Emergency Hotlines","sourceUrl":"https://ehotlines.e.gov.ph/"},
+    {"name":"Philippine Coast Guard","number":"0917 724 3682","type":"coast","source":"Philippine Government Emergency Hotlines","sourceUrl":"https://ehotlines.e.gov.ph/"},
+    {"name":"Bantayan District Hospital","number":"0932 649 3307","type":"hospital","source":"Department of Health facility listing","sourceUrl":"https://ntp.doh.gov.ph/view-facility/?id=1222"},
+    {"name":"LGU Santa Fe","number":"0919 340 4382","type":"rescue","source":"Cebu Provincial Government LGU directory","sourceUrl":"https://www.cebu.gov.ph/vice-governor-sangguniang-panlalawigan/"},
+    {"name":"LGU Bantayan","number":"460-9063","type":"rescue","source":"Cebu Provincial Government LGU directory","sourceUrl":"https://www.cebu.gov.ph/vice-governor-sangguniang-panlalawigan/"},
+    {"name":"LGU Madridejos","number":"439-7586","type":"rescue","source":"Cebu Provincial Government LGU directory","sourceUrl":"https://www.cebu.gov.ph/vice-governor-sangguniang-panlalawigan/"}
+  ]
+}

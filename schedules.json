@@ -1,0 +1,34 @@
+{
+  "status": "reference",
+  "lastChecked": "2026-10-06",
+  "primarySource": "Super Shuttle Roro operator schedule",
+  "primarySourceUrl": "https://www.supershuttleroro.com/schedules",
+  "note": "Operator-published daily timetable. Confirm the actual sailing before travel because schedules can change due to weather, safety, maintenance, tide/port conditions, or operations. Published third-party schedules may differ; Saferry does not merge conflicting times into a single list.",
+  "operator": "Super Shuttle Ferry",
+  "routeDuration": "Est. 1 hr 30 mins",
+  "routes": {
+    "HAGNAYA → STA. FE": [
+      {"time":"2:00 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"4:00 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"7:00 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"8:00 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"10:30 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"12:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"2:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"4:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"}
+    ],
+    "STA. FE → HAGNAYA": [
+      {"time":"4:00 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"8:30 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"10:30 AM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"12:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"2:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"4:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"},
+      {"time":"6:30 PM","type":"Daily RORO trip","duration":"Est. travel: 1 hr 30 mins","operator":"Super Shuttle Ferry"}
+    ]
+  },
+  "crossCheckSources": [
+    {"name":"BARKOTA / SuperShuttleFerry schedule listing","url":"https://www.barkota.com/super-shuttle-ferry/","note":"Cross-check only; some published trip times differ from the operator schedule."},
+    {"name":"Pamasahe.com — Super Shuttle Ferry 2026","url":"https://pamasahe.com/routes/hagnaya-santa-fe-super-shuttle-ferry-schedule-fares","note":"Cross-check only; published trip times can differ from the operator schedule."}
+  ]
+}
