@@ -1124,3 +1124,162 @@ body.menu-open{overflow:hidden}
   opacity:.6;
   cursor:wait;
 }
+
+/* v21 — real-phone layout refinement
+   Mobile/standalone view uses the full device width. Desktop keeps the centered phone preview. */
+@media (max-width:699px){
+  html, body{width:100%;min-width:100%;background:#FFFFFF;overflow-x:hidden}
+  body{min-height:100dvh}
+  .app{
+    width:100%;
+    max-width:none;
+    min-height:100dvh;
+    margin:0;
+    padding-bottom:calc(72px + env(safe-area-inset-bottom));
+    border-radius:0;
+    box-shadow:none;
+    overflow-x:hidden;
+  }
+
+  .app-header{
+    width:100%;
+    height:calc(58px + env(safe-area-inset-top));
+    min-height:58px;
+    padding:env(safe-area-inset-top) 12px 0;
+    grid-template-columns:52px 1fr 52px;
+    border-bottom:1px solid #DCE7F0;
+  }
+  .brand-title{font-size:18px;letter-spacing:-.35px}
+  .icon-button{width:48px;height:48px;border-radius:14px}
+  .hamburger{width:22px;gap:5px}
+  .hamburger i{height:2.5px}
+  .header-spacer{width:48px;height:48px}
+
+  .page{
+    padding:0 16px calc(92px + env(safe-area-inset-bottom));
+    min-height:calc(100dvh - 58px - env(safe-area-inset-top));
+    background:linear-gradient(180deg,#FFFFFF 0,#F7FAFD 170px,#F7FAFD 100%);
+  }
+  .home-page{padding-top:4px}
+
+  .offline-status{
+    margin:10px 0 10px;
+    padding:6px 11px 6px 9px;
+    gap:6px;
+    font-size:10px;
+    letter-spacing:.55px;
+  }
+  .status-dot{width:8px;height:8px}
+
+  .welcome-card{
+    min-height:112px;
+    padding:16px 16px;
+    border-radius:16px;
+  }
+  .welcome-copy{max-width:57%}
+  .welcome-card h2{font-size:18px;line-height:1.15;margin-bottom:6px}
+  .welcome-card p{font-size:10px;line-height:1.45}
+  .hero-illustration{width:55%;max-width:210px}
+
+  .section-label{margin:18px 0 10px 2px;font-size:11px;letter-spacing:.45px}
+  .feature-grid{gap:10px}
+  .feature-card{min-height:116px;padding:12px 10px 11px;border-radius:16px}
+
+  .feature-icon{
+    width:46px !important;
+    height:46px !important;
+    border-radius:14px !important;
+    margin-bottom:8px !important;
+  }
+  .feature-icon svg{width:23px !important;height:23px !important}
+  .feature-card strong{font-size:12px !important}
+  .feature-card span{font-size:9px !important;line-height:1.45 !important}
+
+  .bottom-nav{
+    width:100%;
+    max-width:none;
+    left:0;
+    right:0;
+    bottom:0;
+    min-height:72px;
+    height:calc(72px + env(safe-area-inset-bottom));
+    padding:7px 8px calc(7px + env(safe-area-inset-bottom));
+    border-radius:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:0;
+    box-shadow:0 -6px 20px rgba(13,45,82,.08);
+  }
+  .nav-item{min-height:58px;border-radius:12px;gap:4px}
+  .nav-item svg{width:23px;height:23px}
+  .nav-item small{font-size:10px}
+
+  /* Internal-page headers */
+  body.schedule-view .schedule-shell-header,
+  body.internal-view .internal-shell-header{
+    width:calc(100% + 32px);
+    margin-left:-16px;
+    padding-left:16px;
+    padding-right:16px;
+    min-height:62px;
+    height:calc(62px + env(safe-area-inset-top));
+    padding-top:env(safe-area-inset-top);
+  }
+  .schedule-shell-header .schedule-shell-title,
+  .internal-shell-header .internal-shell-title{font-size:16px !important}
+  .schedule-shell-button,
+  .internal-shell-button{width:44px;height:44px}
+  .schedule-shell-button svg,
+  .internal-shell-button svg{width:21px;height:21px}
+
+  /* Internal page typography and controls */
+  .route-switch{font-size:10px !important}
+  .route-switch button{min-height:44px;font-size:10px !important}
+  .schedule-date{font-size:12px !important}
+  .schedule-date svg{width:18px;height:18px}
+  .date-nav svg{width:19px;height:19px}
+  .schedule-item{padding:13px 6px !important;gap:11px !important}
+  .schedule-time{min-width:76px !important;font-size:11px !important}
+  .item-main strong{font-size:12px !important}
+  .item-main span{font-size:9px !important}
+  .demo-strip,.change-note{font-size:9px !important;line-height:1.45 !important}
+
+  .safety-tabs button{min-height:42px;font-size:9px}
+  .safety-list.card{padding:8px 12px}
+  .safety-item{padding:13px 2px;gap:11px}
+  .safety-item .list-icon{width:40px;height:40px;border-radius:12px}
+  .safety-item .list-icon svg{width:20px;height:20px}
+  .safety-item .item-main strong{font-size:11px;margin-bottom:3px}
+  .safety-item .item-main span{font-size:9px;line-height:1.4}
+  .safety-chevron{font-size:17px}
+
+  .emergency-page .contact-item{padding:13px 2px;gap:11px}
+  .emergency-page .list-icon{width:40px;height:40px;border-radius:12px}
+  .emergency-page .list-icon svg{width:20px;height:20px}
+  .emergency-page .item-main strong{font-size:11px}
+  .emergency-page .item-main span{font-size:9px}
+  .call-button{width:42px;height:42px}
+  .call-button svg{width:19px;height:19px}
+
+  .about-page .about-card{padding:12px !important}
+  .about-page .app-icon{width:64px !important;height:64px !important;border-radius:16px !important}
+  .about-page .about-name{font-size:16px !important}
+  .about-page .about-version{font-size:10px !important}
+  .about-page .info-row{padding:13px 12px !important;min-height:64px !important}
+  .about-page .info-row .row-icon{width:40px !important;height:40px !important;border-radius:12px !important}
+  .about-page .info-copy strong{font-size:11px}
+  .about-page .info-copy span{font-size:9px;line-height:1.4}
+  .about-page .info-chevron{font-size:20px}
+  .about-page .sync-panel{padding:12px;gap:10px}
+  .about-page .sync-copy strong{font-size:10px}
+  .about-page .sync-copy span{font-size:8.5px;line-height:1.4}
+  .about-page .sync-data-button{min-height:38px;padding:0 12px;font-size:9px;border-radius:10px}
+
+  /* Side menu fills the device width more naturally on phones. */
+  .side-menu{width:min(88vw,360px);top:0;bottom:0;border-radius:0 18px 18px 0}
+  .menu-overlay{inset:0}
+  .side-menu-head{min-height:64px;font-size:19px;padding:0 16px}
+  .menu-close{width:44px;height:44px;font-size:30px}
+  .menu-link{min-height:52px;font-size:13px}
+  .menu-link-icon{width:34px;height:34px;font-size:18px}
+}
