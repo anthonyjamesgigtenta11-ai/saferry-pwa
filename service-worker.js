@@ -1,10 +1,10 @@
-const CACHE="saferry-v25";
-const DATA_CACHE="saferry-data-v21";
+const CACHE="saferry-v29";
+const DATA_CACHE="saferry-data-v22";
 const APP_SHELL=[
   "./",
   "./index.html",
-  "./style.css?v=21",
-  "./script.js?v=21",
+  "./style.css?v=29",
+  "./script.js?v=29",
   "./manifest.json",
   "./data/remote-config.json",
   "./icons/icon-192.png",

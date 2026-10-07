@@ -75,18 +75,45 @@ const icons={
  calendar:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg>`,
  cloudOff:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14"/><path d="M7 18h9.5a4.5 4.5 0 0 0 1.1-8.9A6 6 0 0 0 7.2 7.2"/><path d="M6 10.5A4.2 4.2 0 0 0 7 18"/></svg>`,
  alert:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 8 15H4L12 4Z"/><path d="M12 9v4M12 16h.01"/></svg>`,
- beach:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M9 20c.2-3.2 1.3-6 3-8.8 1.7 2.8 2.8 5.6 3 8.8"/><path d="M8 11.5c2.1-2.2 5.6-2.7 8.5-1.2l1.5.8"/><path d="M12 7v3.2"/></svg>`,
- lifebuoy:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="m6.3 6.3 3.2 3.2M14.5 14.5l3.2 3.2M17.7 6.3l-3.2 3.2M9.5 14.5l-3.2 3.2"/></svg>`,
- traveler:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="2.4"/><path d="M8.2 19.5 10 11l-3-1.8M10 11l3.3 2.4 3.1-1.6M11 13.7l-1.7 5.8M13.3 13.2 16 18.8"/></svg>`,
- weather:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 14.5h11a3.5 3.5 0 0 0 .2-7 5.3 5.3 0 0 0-10.3 1A3 3 0 0 0 5 14.5Z"/><path d="M8 18h.01M12 18h.01M16 18h.01"/></svg>`,
- bag:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1.2 12H4.8L6 8Z"/><path d="M9 8V6.8A2.8 2.8 0 0 1 11.8 4h.4A2.8 2.8 0 0 1 15 6.8V8"/></svg>`,
- ticket:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v12H5z"/><path d="M9 6v12M11.8 9h4M11.8 12h4M11.8 15h2"/></svg>`,
- capacity:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="2.2"/><circle cx="15" cy="8" r="2.2"/><path d="M4.8 18c.3-3 2-4.5 4.2-4.5S12.9 15 13.2 18M10.8 18c.3-2.5 1.8-4 4.2-4s3.7 1.5 4 4"/></svg>`,
- police:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 18 6v4.5c0 4.1-2.5 7.4-6 9-3.5-1.6-6-4.9-6-9V6l6-3Z"/><path d="M9 10h6M10.2 13h3.6"/><path d="M8.5 6.4h7"/></svg>`,
- rescue:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 8.5 15.5 15.5M15.5 8.5 8.5 15.5"/><circle cx="12" cy="12" r="2.2"/></svg>`,
- coast:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16"/><path d="M7 15c1.3-2.4 2.9-3.6 5-3.6s3.7 1.2 5 3.6"/><path d="M12 5v6M9 8l3-3 3 3"/></svg>`,
+ plan:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="m14.8 9.2-2.6 5.8-5.8 2.6 2.6-5.8 5.8-2.6Z"/><circle cx="12.2" cy="11.8" r="1.1"/></svg>`,
+ vessel:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14h16l-2 4H6l-2-4Z"/><path d="M7 14V8h10v6M9 8V6h6v2M12 4v2"/><path d="M4 19.5c1 .6 2 .9 3.2.9s2.2-.3 3.2-.9c1 .6 2 .9 3.2.9s2.2-.3 3.2-.9c1 .6 2 .9 3.2.9"/></svg>`,
+ lifejacket:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 4.5 6 10v9.5h5V11h2v8.5h5V10l-2-5.5-4 3-4-3Z"/><path d="M11 8.2h2M7.3 12.5H11M13 12.5h3.7"/></svg>`,
+ capacity:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><path d="M4.8 18c.2-2.8 1.4-4.3 3.2-4.3S11 15.2 11.2 18M12.8 18c.2-2.8 1.4-4.3 3.2-4.3s3 1.5 3.2 4.3"/><path d="M5 20h14"/></svg>`,
+ ticket:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v12H5z"/><path d="M9 6v12M11.8 9h4M11.8 12h3M11.8 15h2"/></svg>`,
+ advisory:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15.5c2-4 4.2-6 7-6s5 2 7 6"/><path d="M8 15.5c1.2-2.2 2.5-3.3 4-3.3s2.8 1.1 4 3.3"/><path d="M12 5v3M5.5 8l2.1 2.1M18.5 8l-2.1 2.1"/></svg>`,
+ swim:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="15.5" cy="6.5" r="2"/><path d="M11.5 11.5c2.1 0 3.3 1.2 4.7 1.2 1.2 0 2.2-.5 3-1.2"/><path d="m10 12.5-2.4 2.1M12.5 12.5l-1 5.5M13.8 13.2l3.5 4"/><path d="M4 19.5c1 .6 2 .9 3.2.9s2.2-.3 3.2-.9c1 .6 2 .9 3.2.9s2.2-.3 3.2-.9c1 .6 2 .9 3.2.9"/></svg>`,
+ lifeguard:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6.5" r="2.2"/><path d="M7.5 19c.3-4.2 1.7-6.3 4.5-6.3s4.2 2.1 4.5 6.3"/><path d="M8 13h8M9 16h6"/></svg>`,
+ buddy:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="2"/><circle cx="16" cy="8" r="2"/><path d="M4.5 18c.2-3 1.5-4.7 3.5-4.7s3.3 1.7 3.5 4.7M12.5 18c.2-3 1.5-4.7 3.5-4.7s3.3 1.7 3.5 4.7"/><path d="M9.5 11.5h5"/></svg>`,
+ hazard:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 8 15H4L12 4Z"/><path d="M12 9v4"/><path d="M12 16h.01"/><path d="M6 21h12"/></svg>`,
+ noImpairment:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6v3H9z"/><path d="M10 7v4.5A4.5 4.5 0 0 0 14.5 16H16M7 20h10"/><path d="m5 5 14 14"/></svg>`,
+ emergencyReady:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 20 7v5c0 4.5-3 8.2-8 10-5-1.8-8-5.5-8-10V7l8-3Z"/><path d="M12 8v5M12 16h.01"/></svg>`,
+ policeBadge:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 18 6v4.8c0 4-2.4 7.3-6 8.8-3.6-1.5-6-4.8-6-8.8V6l6-3Z"/><path d="m12 7 1 2 2.2.2-1.7 1.5.5 2.1-2-1.1-2 1.1.5-2.1-1.7-1.5L11 9l1-2Z"/></svg>`,
+ civic:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h16"/><path d="m6 9 6-4 6 4"/><path d="M6 11v7M10 11v7M14 11v7M18 11v7"/><path d="M4 20h16"/></svg>`,
+ coastGuard:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v10M8.5 7.5 12 4l3.5 3.5"/><path d="M5 14h14l-2 4H7l-2-4Z"/><path d="M3.5 19.5c1 .6 2 .9 3.2.9s2.2-.3 3.2-.9c1 .6 2 .9 3.2.9s2.2-.3 3.2-.9c1 .6 2 .9 3.2.9"/></svg>`,
+ hospitalCross:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h12v16H6z"/><path d="M10 7h4v3h3v4h-3v3h-4v-3H7v-4h3V7Z"/></svg>`,
+ localResponse:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 12h7M12 8.5v7"/><path d="M12 3.5v2M12 18.5v2M3.5 12h2M18.5 12h2"/></svg>`,
+ rescue:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="8.5"/></svg>`,
  hospital:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="1.5"/><path d="M10 8h4v3h3v4h-3v3h-4v-3H7v-4h3V8Z"/></svg>`,
- fire:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c4.2 0 7-3 7-7 0-4.5-3.2-6.3-4.9-9.1-.3 2-1.2 3.4-2.8 4.8C10.6 7.2 9.5 6 8.5 4.8 7.9 8 5 10.4 5 14c0 4 2.8 7 7 7Z"/><path d="M12 17.5c1.4 0 2.5-1.1 2.5-2.5 0-1-.5-1.8-1.2-2.5-.2.9-.6 1.5-1.3 2-.3-.8-.8-1.4-1.3-2.1-.2 1.6-.9 2.4-.9 3.1 0 1.1.9 2 2.2 2Z"/></svg>`
+ fire:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c4.2 0 7-3 7-7 0-4.5-3.2-6.3-4.9-9.1-.3 2-1.2 3.4-2.8 4.8C10.6 7.2 9.5 6 8.5 4.8 7.9 8 5 10.4 5 14c0 4 2.8 7 7 7Z"/><path d="M12 17.5c1.4 0 2.5-1.1 2.5-2.5 0-1-.5-1.8-1.2-2.5-.2.9-.6 1.5-1.3 2-.3-.8-.8-1.4-1.3-2.1-.2 1.6-.9 2.4-.9 3.1 0 1.1.9 2 2.2 2Z"/></svg>`,
+  lifejacketNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4h6l2 5-2.2 8H9.2L7 9 9 4Z"/><path d="M9 8h6M10 12h4M10 16h4"/><path d="M8 5 5.5 9.5 8 14M16 5l2.5 4.5L16 14"/></svg>`,
+  vesselNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h16l-2 4H6l-2-4Z"/><path d="M8 13V8h8v5M10 8V5h4v3M12 3v2"/><path d="M6 18c1.2.8 2.3 1.2 3.5 1.2S11.8 18.8 13 18c1.2.8 2.3 1.2 3.5 1.2S18.8 18.8 20 18"/></svg>`,
+  weatherNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="3"/><path d="M9 2v2M9 14v2M2 9h2M14 9h2M4 4l1.5 1.5M12.5 12.5 14 14"/><path d="M12 17h6a3 3 0 0 0 0-6 4 4 0 0 0-7.5-1.7A3.5 3.5 0 0 0 9 17h3Z"/></svg>`,
+  luggageNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2M8 11h8M8 15h8M8 20v-3M16 20v-3"/></svg>`,
+  crewNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-2.8 8.2-7 10-4.2-1.8-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>`,
+  sunNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/><path d="M6 19h12"/></svg>`,
+  waterNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7c1.5 0 2.2.9 3.8.9S9.3 7 10.8 7s2.2.9 3.8.9S16.8 7 18.3 7 20.5 7.9 22 7.9"/><path d="M3 12c1.5 0 2.2.9 3.8.9s2.5-.9 4-.9 2.2.9 3.8.9 2.2-.9 3.7-.9 2.2.9 3.7.9"/><path d="M3 17c1.5 0 2.2.9 3.8.9s2.5-.9 4-.9 2.2.9 3.8.9 2.2-.9 3.7-.9 2.2.9 3.7.9"/></svg>`,
+  bottleNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6v3l1.5 2.5V20a2 2 0 0 1-2 1h-5a2 2 0 0 1-2-1V8.5L9 6V3Z"/><path d="M9 10h6M9 14h6"/></svg>`,
+  firstAidNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="6" width="14" height="14" rx="2"/><path d="M9 6V4h6v2M10 11h4v6h-4zM8 13h8"/></svg>`,
+  flagNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 21V4"/><path d="M6 5c4-3 7 3 12 0v9c-5 3-8-3-12 0Z"/><path d="M4 21h5"/></svg>`,
+  policeNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 18 6v5c0 4-2.4 7.3-6 8.8-3.6-1.5-6-4.8-6-8.8V6l6-3Z"/><path d="M12 7v5M9.5 10h5"/></svg>`,
+  alertNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 8 15H4L12 4Z"/><path d="M12 9v5M12 17h.01"/></svg>`,
+  anchorNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2"/><path d="M12 7v12M8 11h8M5 14a7 7 0 0 0 14 0M5 19h14"/></svg>`,
+  medicalNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="5" width="14" height="15" rx="2"/><path d="M10 5V3h4v2M10 10h4v4h-4zM8 12h8"/></svg>`,
+  fireNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c4.3 0 7-3 7-7 0-4.5-3.1-6.3-5-9.2-.1 2.1-1.1 3.6-2.8 4.9-.7-2-1.8-3.3-3-4.5C7.5 8.5 5 11 5 14c0 4 2.7 7 7 7Z"/><path d="M12 18c1.3 0 2.3-1 2.3-2.3 0-.9-.4-1.6-1.1-2.2-.2.8-.6 1.3-1.1 1.8-.3-.7-.6-1.2-1-1.8-.2 1.4-.7 2-.7 2.6 0 1.1.7 1.9 1.6 1.9Z"/></svg>`,
+  aboutApp:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7h.01"/></svg>`,
+  guideNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h10a2 2 0 0 1 2 2v14H8a2 2 0 0 1-2-2V4Z"/><path d="M8 4v14M10 8h5M10 12h5M10 16h3"/></svg>`,
+  dataNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v7c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 12v7c0 1.7 3.1 3 7 3s7-1.3 7-3v-7"/></svg>`,
+  disclaimerNew:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 8 15H4L12 4Z"/><path d="M12 9v4M12 16h.01"/></svg>`
 };
 
 function setConnection(){
@@ -98,7 +125,7 @@ function setConnection(){
   existing.classList.toggle("is-offline",!navigator.onLine);
 }
 
-function activeNav(route){navItems.forEach(n=>n.classList.toggle("active",n.dataset.route===route));}
+function activeNav(route){const key=route==="safety-detail"?"safety":route==="about-detail"?"about":route;navItems.forEach(n=>n.classList.toggle("active",n.dataset.route===key));}
 function go(route){currentRoute=route;closeMenu();render();window.scrollTo(0,0);}
 
 function openMenu(){
@@ -118,8 +145,8 @@ function closeMenu(){
   setTimeout(()=>{menuOverlay.hidden=true;},180);
 }
 
-function internalHeader(title,actionClass="internal-shell-spacer"){
-  return `<div class="internal-shell-header"><button class="internal-shell-button" data-back type="button" aria-label="Back to Home"><svg viewBox="0 0 24 24"><path d="m14.5 5-7 7 7 7"/></svg></button><div class="internal-shell-title">${title}</div>${actionClass==="calendar"?`<button class="internal-shell-button" data-focus-date type="button" aria-label="Choose date">${icons.calendar}</button>`:`<div class="internal-shell-spacer" aria-hidden="true"></div>`}</div>`;
+function internalHeader(title,actionClass="internal-shell-spacer",backRoute="home"){
+  return `<div class="internal-shell-header"><button class="internal-shell-button" data-back-route="${backRoute}" type="button" aria-label="Back"><svg viewBox="0 0 24 24"><path d="m14.5 5-7 7 7 7"/></svg></button><div class="internal-shell-title">${title}</div>${actionClass==="calendar"?`<button class="internal-shell-button" data-focus-date type="button" aria-label="Choose date">${icons.calendar}</button>`:`<div class="internal-shell-spacer" aria-hidden="true"></div>`}</div>`;
 }
 
 function home(){
@@ -160,19 +187,68 @@ function schedulesPage(){
 
 function safetyPage(){
   const list=safetyTab==="sea"?safetySea:safetyBeach;
-  const safetyIcons=safetyTab==="sea"?[icons.traveler,icons.ferry,icons.lifebuoy,icons.capacity,icons.ticket,icons.alert]:[icons.beach,icons.beach,icons.traveler,icons.alert,icons.shield,icons.phone];
-  appContent.innerHTML=`<div class="page internal-page safety-page">${internalHeader("Safety Tips")}<div class="safety-tabs" role="tablist" aria-label="Safety categories"><button class="${safetyTab==="sea"?"active":""}" data-safety-tab="sea" type="button">SEA TRAVEL</button><button class="${safetyTab==="beach"?"active":""}" data-safety-tab="beach" type="button">BEACH SAFETY</button></div><div class="card safety-list">${list.map((x,i)=>`<div class="safety-item"><div class="list-icon">${safetyIcons[i]||icons.shield}</div><div class="item-main"><strong>${x[0]}</strong><span>${x[1]}</span></div><div class="safety-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></div></div>`).join("")}</div></div>`;
+  const safetyIcons=safetyTab==="sea"?[icons.plan,icons.vesselNew,icons.lifejacketNew,icons.capacity,icons.ticket,icons.weatherNew]:[icons.sunNew,icons.lifeguard,icons.buddy,icons.waterNew,icons.noImpairment,icons.emergencyReady];
+  appContent.innerHTML=`<div class="page internal-page safety-page">${internalHeader("Safety Tips")}<div class="safety-tabs" role="tablist" aria-label="Safety categories"><button class="${safetyTab==="sea"?"active":""}" data-safety-tab="sea" type="button">SEA TRAVEL</button><button class="${safetyTab==="beach"?"active":""}" data-safety-tab="beach" type="button">BEACH SAFETY</button></div><div class="card safety-list">${list.map((x,i)=>`<button class="safety-item safety-item-button" data-safety-detail="${i}" data-safety-category="${safetyTab}" type="button"><div class="list-icon">${safetyIcons[i]||icons.shield}</div><div class="item-main"><strong>${x[0]}</strong><span>${x[1]}</span></div><div class="safety-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></div></button>`).join("")}</div></div>`;
+}
+
+function contactIconFor(name,type){
+  const label=String(name||"").toLowerCase();
+  if(type==="police" || label.includes("pnp")) return icons.policeNew;
+  if(type==="coast" || label.includes("coast guard")) return icons.anchorNew;
+  if(type==="hospital" || label.includes("hospital")) return icons.medicalNew;
+  if(label.includes("lgu")) return icons.civic;
+  if(label.includes("bantayan 911")) return icons.localResponse;
+  return icons.rescue;
 }
 
 function emergencyPage(){
-  const iconMap={police:icons.police,rescue:icons.rescue,coast:icons.coast,hospital:icons.hospital,fire:icons.fire};
-  appContent.innerHTML=`<div class="page internal-page emergency-page">${internalHeader("Emergency Contacts")}<div class="emergency-alert"><span class="emergency-alert-icon">${icons.alert}</span><div><strong>In case of emergency, call 911 first.</strong><span>Local reference contacts are provided below; reconfirm details before final public deployment.</span></div></div><div class="card emergency-card" aria-label="Emergency contacts">${contacts.map(x=>{const [name,number,type]=Array.isArray(x)?x:[x.name,x.number,x.type];return `<div class="contact-item"><div class="contact-avatar contact-type-${type}">${iconMap[type]||icons.phone}</div><div class="item-main"><strong>${name}</strong><span>${number}</span></div><a class="contact-action" href="tel:${number.replace(/\s/g,"")}" aria-label="Call ${name}">${icons.phone}</a></div>`}).join("")}</div></div>`;
+  appContent.innerHTML=`<div class="page internal-page emergency-page">${internalHeader("Emergency Contacts")}<div class="emergency-alert"><span class="emergency-alert-icon">${icons.alert}</span><div><strong>In case of emergency, call 911 first.</strong><span>Local reference contacts are provided below; reconfirm details before final public deployment.</span></div></div><div class="card emergency-card" aria-label="Emergency contacts">${contacts.map(x=>{const [name,number,type]=Array.isArray(x)?x:[x.name,x.number,x.type];return `<div class="contact-item"><div class="contact-avatar contact-type-${type}">${contactIconFor(name,type)}</div><div class="item-main"><strong>${name}</strong><span>${number}</span></div><a class="contact-action" href="tel:${String(number||"").replace(/\s/g,"")}" aria-label="Call ${name}">${icons.phone}</a></div>`}).join("")}</div></div>`;
 }
 
 function aboutPage(){
   const installVisible=document.body.classList.contains("install-available") && !window.matchMedia("(display-mode: standalone)").matches;
-  appContent.innerHTML=`<div class="page internal-page about-page">${internalHeader("About & Info")}<section class="about-hero card" aria-label="Saferry application information"><img src="icons/icon-192.png" alt="Saferry app icon" class="about-app-icon"><div class="about-hero-copy"><h2>Saferry</h2><div class="about-version">Version 1.0.0</div><div class="about-badge">Offline-First App</div></div></section><div class="info-list about-info-list"><button class="info-row" type="button" data-info-item="about"><div class="list-icon">${icons.info}</div><div class="info-copy"><strong>About Saferry</strong><span>Learn more about the app.</span></div><span class="info-chevron" aria-hidden="true">›</span></button><button class="info-row" type="button" data-info-item="how"><div class="list-icon">${icons.alert}</div><div class="info-copy"><strong>How to Use</strong><span>Quick guide for using Saferry.</span></div><span class="info-chevron" aria-hidden="true">›</span></button><button class="info-row" type="button" data-info-item="data"><div class="list-icon">${icons.cloudOff}</div><div class="info-copy"><strong>Data Information</strong><span>Learn how information is stored offline.</span></div><span class="info-chevron" aria-hidden="true">›</span></button><button class="info-row" type="button" data-info-item="disclaimer"><div class="list-icon">${icons.alert}</div><div class="info-copy"><strong>Disclaimer</strong><span>Important notes and disclaimer.</span></div><span class="info-chevron" aria-hidden="true">›</span></button></div><button id="installAppLink" class="install-app-button" type="button" ${installVisible?"":"hidden"}>Install Saferry</button><div class="data-reference-note">Reference data last checked: October 6, 2026. Ferry schedules and emergency contacts can change; verify before critical travel or emergencies.</div><div class="sync-panel"><div class="sync-copy"><strong>Data synchronization</strong><span id="syncStatusText">${syncMeta.message}</span></div><button id="syncDataLink" class="sync-data-button" type="button">${remoteConfig.enabled?"Update Data":"Sync Setup"}</button></div><div class="about-message" id="aboutMessage" hidden aria-live="polite"></div></div>`;
+  appContent.innerHTML=`<div class="page internal-page about-page">${internalHeader("About & Info")}<section class="about-hero card" aria-label="Saferry application information"><img src="icons/icon-192.png" alt="Saferry app icon" class="about-app-icon"><div class="about-hero-copy"><h2>Saferry</h2><div class="about-version">Version 1.0.0</div><div class="about-badge">Offline-First App</div></div></section><div class="info-list about-info-list"><button class="info-row" type="button" data-info-item="about"><div class="list-icon">${icons.aboutApp}</div><div class="info-copy"><strong>About Saferry</strong><span>Learn more about the app.</span></div><span class="info-chevron" aria-hidden="true">›</span></button><button class="info-row" type="button" data-info-item="how"><div class="list-icon">${icons.guideNew}</div><div class="info-copy"><strong>How to Use</strong><span>Quick guide for using Saferry.</span></div><span class="info-chevron" aria-hidden="true">›</span></button><button class="info-row" type="button" data-info-item="data"><div class="list-icon">${icons.dataNew}</div><div class="info-copy"><strong>Data Information</strong><span>Learn how information is stored offline.</span></div><span class="info-chevron" aria-hidden="true">›</span></button><button class="info-row" type="button" data-info-item="disclaimer"><div class="list-icon">${icons.disclaimerNew}</div><div class="info-copy"><strong>Disclaimer</strong><span>Important notes and disclaimer.</span></div><span class="info-chevron" aria-hidden="true">›</span></button></div><button id="installAppLink" class="install-app-button" type="button" ${installVisible?"":"hidden"}>Install Saferry</button><div class="data-reference-note">Reference data last checked: October 6, 2026. Ferry schedules and emergency contacts can change; verify before critical travel or emergencies.</div><div class="sync-panel"><div class="sync-copy"><strong>Data synchronization</strong><span id="syncStatusText">${syncMeta.message}</span></div><button id="syncDataLink" class="sync-data-button" type="button">${remoteConfig.enabled?"Update Data":"Sync Setup"}</button></div><div class="about-message" id="aboutMessage" hidden aria-live="polite"></div></div>`;
 }
+
+const safetyDetailContent={
+  sea:[
+    {title:"Plan Ahead",icon:icons.plan,summary:"Prepare before you leave for the port.",body:["Check the published ferry schedule before traveling and allow enough time to reach the terminal.","Keep your ticket and passenger information ready before boarding.","For important trips, check the operator and current weather or port advisories again before leaving."]},
+    {title:"Use Authorized Vessels",icon:icons.vesselNew,summary:"Choose authorized passenger vessels and follow crew instructions.",body:["Use the ferry service and vessel designated for passenger travel. Do not board an unapproved or overcrowded vessel.","Follow the terminal and crew instructions throughout boarding and sailing.","If a crew member gives a safety instruction, follow it promptly."]},
+    {title:"Wear Your Life Jacket",icon:icons.lifejacketNew,summary:"Know where the life jackets are and follow the crew's instructions.",body:["Follow the vessel's instructions on when and how to use a life jacket.","Know where your nearest life-saving equipment is located before the trip begins.","If conditions worsen, follow crew directions immediately rather than waiting for instructions from the app."]},
+    {title:"Respect Passenger Capacity",icon:icons.capacity,summary:"Do not board an overcrowded trip.",body:["Passenger vessels have authorized capacity limits intended to support safe operation.","If a vessel appears overcrowded or boarding conditions seem unsafe, wait for official guidance instead of forcing your way aboard.","Let the operator and authorities manage capacity and boarding decisions."]},
+    {title:"Check Passenger Details",icon:icons.ticket,summary:"Make sure your ticket and passenger details are correct.",body:["Review the name, route and other passenger information before boarding.","Keep your ticket or booking reference available in case the terminal or crew needs to verify it.","Correct errors with the ticketing or terminal staff before boarding when possible."]},
+    {title:"Follow Current Advisories",icon:icons.weatherNew,summary:"Follow the latest operator, port, Coast Guard and weather information.",body:["Ferry schedules are reference information and can change because of operational or weather conditions.","Check official advisories before traveling and follow any cancellation, suspension or safety instruction.","Saferry does not replace real-time instructions from the ferry operator or authorities."]}
+  ],
+  beach:[
+    {title:"Choose a Safe Area",icon:icons.sunNew,summary:"Use designated or monitored swimming areas.",body:["Look for signs, local safety notices and areas that are intended for swimming.","Avoid entering water where warning signs indicate dangerous conditions or restricted activity.","When in doubt, ask local authorities or lifeguards before entering the water."]},
+    {title:"Look for Lifeguards",icon:icons.lifeguard,summary:"Prefer areas with lifeguards and available rescue equipment.",body:["Choose a monitored area when one is available.","Take note of where lifeguards and emergency equipment are located before swimming.","Follow lifeguard instructions immediately, especially when conditions change."]},
+    {title:"Stay With Others",icon:icons.buddy,summary:"Do not swim alone.",body:["Stay with a companion and keep children and vulnerable swimmers within close reach.","Tell someone where you are going and avoid isolated swimming areas.","If a swimmer is in trouble, call for trained assistance rather than entering a dangerous situation yourself."]},
+    {title:"Avoid Hazard Areas",icon:icons.waterNew,summary:"Stay away from marked danger zones and watercraft traffic.",body:["Observe warning flags, ropes, signs and local instructions.","Avoid areas used by anchored or moving boats and other watercraft.","Move to a safer area if waves, currents or weather conditions become difficult."]},
+    {title:"Do Not Swim Impaired",icon:icons.noImpairment,summary:"Do not swim when alcohol or other impairment affects your judgment.",body:["Swimming requires attention, balance and the ability to respond quickly to changing conditions.","Do not enter the water if you are drunk or otherwise unable to respond safely.","If someone is impaired, keep them away from the water and help them stay with a responsible companion."]},
+    {title:"Keep Emergency Contacts Ready",icon:icons.emergencyReady,summary:"Know who to call before you enter the water.",body:["Keep 911 and relevant local emergency contacts available on the phone.","Tell companions where the nearest help point or rescue service can be reached.","In an emergency, call for trained assistance and follow the instructions of responders."]}
+  ]
+};
+
+const aboutDetailContent={
+  about:{title:"About Saferry",icon:icons.aboutApp,body:["Saferry is an offline-first travel companion designed to help tourists and residents travel more safely to and from Bantayan Island.","The app brings ferry schedule references, practical sea and beach safety reminders, and emergency contacts into one lightweight mobile application.","Its core information can remain available offline, while an internet connection can be used to synchronize updated data from the Saferry remote data repository."]},
+  how:{title:"How to Use",icon:icons.guideNew,body:["Use Home or the bottom navigation to open Ferry Schedules, Safety Tips, Emergency Contacts and About & Info.","In Ferry Schedules, switch the route and date to review the current reference schedule.","In Safety Tips, choose Sea Travel or Beach Safety, then tap a tip to read its detailed guidance.","In Emergency Contacts, tap a call button to contact the selected service. Use 911 for immediate emergencies.","When online, use Update Data in About & Info to synchronize the latest available remote data. When offline, Saferry uses the latest saved copy."]},
+  data:{title:"Data Information",icon:icons.dataNew,body:["Saferry stores core reference data locally so the main features continue to work without an internet connection.","When online, the app checks the Saferry remote data repository for a newer manifest and validated JSON data.","A successful synchronization is saved locally. If a later refresh fails or there is no internet connection, Saferry continues using the last successful local copy.","Ferry schedules and emergency contact details are reference information and should be reconfirmed when circumstances are critical."]},
+  disclaimer:{title:"Disclaimer",icon:icons.disclaimerNew,body:["Saferry provides reference information and safety reminders; it is not a substitute for official instructions, trained responders or emergency services.","Ferry schedules may change because of weather, port conditions, vessel operations or other circumstances.","Emergency contact numbers and local services can change. For an immediate emergency, use the official emergency service available in your area and follow responder instructions.","Always follow current instructions from ferry operators, the Philippine Coast Guard, local authorities, lifeguards and other responsible officials."]}
+};
+
+function safetyDetailPage(category,index){
+  const entry=(safetyDetailContent[category]||[])[Number(index)];
+  const sourceData=category==="sea"?(safetySea[Number(index)]||[]):(safetyBeach[Number(index)]||[]);
+  if(!entry){go("safety");return;}
+  appContent.innerHTML=`<div class="page internal-page detail-page safety-detail-page">${internalHeader(entry.title,"internal-shell-spacer","safety")}<section class="detail-hero card"><div class="detail-icon">${entry.icon}</div><div><h2>${entry.title}</h2><p>${entry.summary}</p></div></section><section class="card detail-content"><h3>What to do</h3>${entry.body.map(t=>`<p>${t}</p>`).join("")}<div class="detail-reminder"><strong>Saferry reminder</strong><span>${sourceData[1]||"Follow current instructions from the relevant authorities."}</span></div></section></div>`;
+}
+
+function aboutDetailPage(key){
+  const entry=aboutDetailContent[key];
+  if(!entry){go("about");return;}
+  appContent.innerHTML=`<div class="page internal-page detail-page about-detail-page">${internalHeader(entry.title,"internal-shell-spacer","about")}<section class="detail-hero card"><div class="detail-icon">${entry.icon}</div><div><h2>${entry.title}</h2><p>${key==="about"?"Learn what Saferry is and why it was built.":key==="how"?"Quick guide to using Saferry.":key==="data"?"How Saferry stores and updates its information.":"Important limitations and safety notes."}</p></div></section><section class="card detail-content"><h3>Information</h3>${entry.body.map(t=>`<p>${t}</p>`).join("")}</section></div>`;
+}
+
 
 function applyDataBundle(bundle,source="local"){
   const {schedules,safety,emergency,manifest}=bundle || {};
@@ -346,9 +422,11 @@ ${detail}`);
   }
 }
 
+let detailState={category:"sea",index:0,key:"about"};
+
 function render(){
   activeNav(currentRoute);document.body.classList.toggle("internal-view",currentRoute!=="home");
-  if(currentRoute==="schedules")schedulesPage();else if(currentRoute==="safety")safetyPage();else if(currentRoute==="emergency")emergencyPage();else if(currentRoute==="about")aboutPage();else home();
+  if(currentRoute==="schedules")schedulesPage();else if(currentRoute==="safety")safetyPage();else if(currentRoute==="safety-detail")safetyDetailPage(detailState.category,detailState.index);else if(currentRoute==="emergency")emergencyPage();else if(currentRoute==="about")aboutPage();else if(currentRoute==="about-detail")aboutDetailPage(detailState.key);else home();
 }
 
 function openDatePicker(){
@@ -380,7 +458,10 @@ document.addEventListener("keydown",e=>{if(e.key==="Escape")closeMenu();});
 document.addEventListener("click",e=>{
   const route=e.target.closest("[data-route-to]"); if(route) go(route.dataset.routeTo);
   const menuRoute=e.target.closest("[data-menu-route]"); if(menuRoute) go(menuRoute.dataset.menuRoute);
-  const back=e.target.closest("[data-back]"); if(back) go("home");
+  const back=e.target.closest("[data-back-route]"); if(back){go(back.dataset.backRoute);return;}
+  const safetyDetail=e.target.closest("[data-safety-detail]"); if(safetyDetail){detailState={category:safetyDetail.dataset.safetyCategory,index:Number(safetyDetail.dataset.safetyDetail)};currentRoute="safety-detail";closeMenu();render();window.scrollTo(0,0);return;}
+  const infoDetail=e.target.closest("[data-info-item]");
+  if(infoDetail){detailState={key:infoDetail.dataset.infoItem};currentRoute="about-detail";closeMenu();render();window.scrollTo(0,0);return;}
   const direction=e.target.closest("[data-direction]"); if(direction){scheduleDirection=direction.dataset.direction;schedulesPage();}
   const dateShift=e.target.closest("[data-date-shift]"); if(dateShift) shiftScheduleDate(Number(dateShift.dataset.dateShift));
   const safety=e.target.closest("[data-safety-tab]"); if(safety){safetyTab=safety.dataset.safetyTab;safetyPage();}
@@ -392,8 +473,7 @@ document.addEventListener("click",e=>{
     deferredInstallPrompt.userChoice.finally(()=>{deferredInstallPrompt=null;installApp.hidden=true;});
     return;
   }
-  const infoItem=e.target.closest("[data-info-item]");
-  if(infoItem){const messages={about:"Saferry is an offline-first travel companion for Bantayan Island, combining ferry schedule reference, practical safety information, and emergency contacts.",how:"Use the Home shortcuts or bottom navigation to check schedules, read safety tips, or open emergency contacts.",data:"Core app content is stored locally and cached by the PWA. When online, cached data files can refresh; when offline, the latest cached copy is used.",disclaimer:"Ferry schedules and emergency contacts are reference data and may change. Always confirm critical information with the operator or authorities before travel or emergency use."};const message=document.getElementById("aboutMessage");if(message){message.hidden=false;message.textContent=messages[infoItem.dataset.infoItem]||"";}}
+
 });
 
 document.addEventListener("change",e=>{
@@ -432,7 +512,7 @@ async function loadData(){
   }
 }
 
-if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=20",{updateViaCache:"none"}).catch(console.error);});}
+if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=28",{updateViaCache:"none"}).catch(console.error);});}
 
 render();
 loadData();

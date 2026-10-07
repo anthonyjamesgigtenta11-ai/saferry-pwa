@@ -1315,3 +1315,270 @@ body.menu-open{overflow:hidden}
   .contact-action svg{width:22px;height:22px}
   .schedule-time{font-variant-numeric:tabular-nums;letter-spacing:-.2px}
 }
+
+
+/* ===== v27 mobile polish ===== */
+@media (max-width:699px){
+  body.internal-view .internal-page,
+  body.schedule-view .schedule-page{padding-top:calc(58px + env(safe-area-inset-top)) !important;}
+  body.schedule-view .page,
+  body.internal-view .page{scroll-padding-top:calc(58px + env(safe-area-inset-top));}
+  body.schedule-view .schedule-shell-header,
+  body.internal-view .internal-shell-header{
+    position:fixed; top:0; left:0; right:0; width:100%;
+    height:calc(58px + env(safe-area-inset-top)); min-height:58px;
+    margin:0 !important; padding:env(safe-area-inset-top) 14px 0;
+    z-index:60; box-shadow:0 2px 10px rgba(13,45,82,.12);
+  }
+  .schedule-shell-title,.internal-shell-title{font-size:17px !important}
+  .schedule-shell-button,.internal-shell-button{width:44px;height:44px}
+  .schedule-shell-button svg,.internal-shell-button svg{width:22px;height:22px}
+  .app{padding-bottom:calc(74px + env(safe-area-inset-bottom));}
+  .page,.internal-page{padding-bottom:calc(88px + env(safe-area-inset-bottom)) !important;}
+  .bottom-nav{
+    min-height:66px; height:calc(66px + env(safe-area-inset-bottom));
+    padding:1px 8px calc(1px + env(safe-area-inset-bottom));
+  }
+  .nav-item{min-height:54px;height:54px;gap:2px;border-radius:10px}
+  .nav-item svg{width:24px;height:24px}
+  .nav-item small{font-size:10px}
+  .schedule-page .schedule-list{gap:7px}
+  .schedule-page .schedule-row{
+    grid-template-columns:104px minmax(0,1fr); align-items:center;
+    min-height:64px; padding:10px 12px;
+  }
+  .schedule-time{min-width:0 !important;white-space:nowrap;font-size:14px !important;line-height:1.15}
+  .schedule-main{min-width:0}
+  .schedule-main strong{font-size:12px !important;line-height:1.25;margin-bottom:3px}
+  .schedule-main span{font-size:9.5px !important;line-height:1.3}
+  .safety-item .list-icon,.emergency-page .contact-avatar{
+    width:48px !important;height:48px !important;border-radius:14px !important;
+    background:linear-gradient(180deg,#F4FAFF 0%,#EAF5FF 100%);
+    border:1px solid #D8EAF7;box-shadow:inset 0 0 0 1px rgba(24,139,214,.04);
+  }
+  .safety-item .list-icon svg,.emergency-page .contact-avatar svg{width:27px !important;height:27px !important;stroke-width:1.8 !important}
+  .safety-item{padding:14px 2px;gap:13px}
+  .safety-item .item-main{min-width:0}
+  .safety-item .item-main strong{font-size:13px !important}
+  .safety-item .item-main span{font-size:10px !important;line-height:1.42}
+  .safety-chevron{font-size:22px}
+  .emergency-page .contact-avatar{color:#0D5B92}
+  .emergency-page .contact-type-police{color:#0D2D52}
+  .emergency-page .contact-type-coast{color:#147BC7}
+  .emergency-page .contact-type-hospital{color:#0C75A8}
+  .emergency-page .contact-type-rescue{color:#147BC7}
+  .emergency-page .item-main{min-width:0}
+  .emergency-page .item-main strong{font-size:12.5px !important;line-height:1.25}
+  .emergency-page .item-main span{font-size:10px !important}
+  .emergency-page .contact-action{width:42px;height:42px}
+  .emergency-page .contact-action svg{width:21px;height:21px}
+}
+
+
+/* ===== v28 fixed bars + detail screens ===== */
+@media (max-width:699px){
+  .app{padding-bottom:calc(66px + env(safe-area-inset-bottom));}
+
+  .app-header{
+    position:fixed !important;
+    top:0; left:0; right:0;
+    height:calc(56px + env(safe-area-inset-top));
+    min-height:56px;
+    padding:env(safe-area-inset-top) 10px 0;
+    grid-template-columns:48px 1fr 48px;
+    z-index:90;
+    box-shadow:0 1px 10px rgba(13,45,82,.08);
+  }
+  .brand-title{font-size:19px}
+  .icon-button{width:46px;height:46px}
+  .hamburger{width:21px;gap:4px}
+  .hamburger i{height:2.4px}
+
+  body:not(.internal-view):not(.schedule-view) .page{
+    padding-top:calc(56px + env(safe-area-inset-top) + 6px) !important;
+    min-height:100dvh;
+  }
+
+  .bottom-nav{
+    position:fixed !important;
+    left:0; right:0; bottom:0;
+    width:100%;
+    height:calc(62px + env(safe-area-inset-bottom));
+    min-height:62px;
+    padding:1px 6px calc(1px + env(safe-area-inset-bottom));
+    z-index:85;
+  }
+  .nav-item{min-height:50px;height:50px;gap:1px}
+  .nav-item svg{width:23px;height:23px}
+  .nav-item small{font-size:9.5px}
+
+  body.schedule-view .page,
+  body.internal-view .page{
+    padding-bottom:calc(82px + env(safe-area-inset-bottom)) !important;
+  }
+  body.schedule-view .schedule-page,
+  body.internal-view .internal-page{
+    padding-top:calc(56px + env(safe-area-inset-top) + 10px) !important;
+    min-height:100dvh !important;
+  }
+  body.schedule-view .schedule-shell-header,
+  body.internal-view .internal-shell-header{
+    height:calc(56px + env(safe-area-inset-top));
+    min-height:56px;
+    padding:env(safe-area-inset-top) 12px 0;
+    z-index:100;
+  }
+  .schedule-shell-button,.internal-shell-button{width:42px;height:42px}
+  .schedule-shell-button svg,.internal-shell-button svg{width:21px;height:21px}
+  .schedule-shell-title,.internal-shell-title{font-size:16px !important}
+
+  .emergency-page .emergency-alert{margin-top:12px !important}
+  .schedule-page .route-switch{margin-top:2px}
+  .schedule-page .schedule-date-row{margin-top:5px}
+  .schedule-page .schedule-row{grid-template-columns:94px minmax(0,1fr);gap:12px;padding:11px 10px;min-height:68px}
+  .schedule-time{font-size:13.5px !important;font-weight:800;align-self:start;padding-top:2px}
+  .schedule-main strong{font-size:12.2px !important;line-height:1.25}
+  .schedule-main span{font-size:9.7px !important;line-height:1.35}
+
+  .safety-item-button{display:grid;width:100%;text-align:left;border:0;background:transparent;color:inherit;font:inherit;align-items:center;grid-template-columns:48px minmax(0,1fr) 20px}
+  .safety-item-button:focus-visible{outline:2px solid rgba(24,139,214,.45);outline-offset:2px;border-radius:12px}
+  .safety-item-button .safety-chevron{justify-self:end}
+
+  .detail-page .detail-hero{display:flex;align-items:center;gap:14px;padding:16px;border-radius:18px;margin-top:4px}
+  .detail-icon{width:56px;height:56px;flex:0 0 auto;display:grid;place-items:center;border-radius:16px;background:linear-gradient(180deg,#F4FAFF,#E8F5FF);border:1px solid #D6EAF7;color:#0C5E97}
+  .detail-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .detail-hero h2{font-size:18px;line-height:1.2;color:var(--navy);margin-bottom:4px}
+  .detail-hero p{font-size:10.5px;line-height:1.45;color:#5E7182}
+  .detail-content{margin-top:12px;padding:18px;border-radius:18px}
+  .detail-content h3{font-size:13px;color:var(--navy);margin-bottom:10px}
+  .detail-content p{font-size:11px;line-height:1.55;color:#50677B;margin-bottom:10px}
+  .detail-content p:last-of-type{margin-bottom:0}
+  .detail-reminder{margin-top:14px;padding:12px;border-radius:12px;background:#F4FAFF;border:1px solid #D6EAF7;display:grid;gap:4px}
+  .detail-reminder strong{font-size:10.5px;color:#0C5E97}
+  .detail-reminder span{font-size:9.5px;line-height:1.45;color:#5A6F81}
+
+  .about-detail-page .detail-content{min-height:220px}
+  .about-detail-page .detail-icon svg{width:28px;height:28px}
+}
+
+@media (min-width:700px){
+  .detail-page .detail-hero{display:flex;align-items:center;gap:14px;padding:18px;margin-top:8px;border-radius:16px}
+  .detail-icon{width:54px;height:54px;display:grid;place-items:center;border-radius:14px;background:#F4FAFF;border:1px solid #D6EAF7;color:#0C5E97}
+  .detail-icon svg{width:28px;height:28px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+  .detail-content{margin-top:12px;padding:18px;border-radius:16px}
+  .detail-content p{line-height:1.6;margin-bottom:10px}
+}
+
+/* ===== v29 readability + compact mobile chrome ===== */
+@media (max-width:699px){
+  /* Reduce empty space above header content while preserving the OS safe area. */
+  .app-header{
+    height:calc(50px + env(safe-area-inset-top));
+    min-height:50px;
+    grid-template-columns:46px 1fr 46px;
+    padding:env(safe-area-inset-top) 8px 0;
+  }
+  .brand-title{font-size:18px !important;letter-spacing:-.25px}
+  .icon-button{width:44px;height:44px;border-radius:12px}
+  .hamburger{width:20px;gap:4px}
+  .hamburger i{height:2.4px}
+  .header-spacer{width:44px;height:44px}
+
+  /* Home and standard pages stay below the fixed top bar. */
+  body:not(.internal-view):not(.schedule-view) .page{
+    padding-top:calc(50px + env(safe-area-inset-top) + 6px) !important;
+  }
+
+  /* Make the app easier to read at normal phone distance. */
+  .offline-status{font-size:12px !important;padding:7px 12px !important}
+  .welcome-card h2{font-size:22px !important}
+  .welcome-card p{font-size:13px !important;line-height:1.5 !important}
+  .section-label{font-size:14px !important;margin-top:18px !important}
+  .feature-card strong{font-size:15px !important}
+  .feature-card span{font-size:12px !important;line-height:1.45 !important}
+
+  /* Fixed inner-page header: shorter, with reserved content space. */
+  body.schedule-view .schedule-page,
+  body.internal-view .internal-page{
+    padding-top:calc(50px + env(safe-area-inset-top) + 8px) !important;
+  }
+  body.schedule-view .schedule-shell-header,
+  body.internal-view .internal-shell-header{
+    height:calc(50px + env(safe-area-inset-top));
+    min-height:50px;
+    padding:env(safe-area-inset-top) 10px 0;
+  }
+  .schedule-shell-title,.internal-shell-title{font-size:17px !important}
+  .schedule-shell-button,.internal-shell-button{width:40px;height:40px}
+  .schedule-shell-button svg,.internal-shell-button svg{width:21px;height:21px}
+
+  /* Schedules: wider, readable time column and larger supporting text. */
+  .route-switch button{font-size:12px !important;min-height:46px}
+  .schedule-date{font-size:14.5px !important}
+  .schedule-row{
+    grid-template-columns:102px minmax(0,1fr) !important;
+    gap:13px !important;
+    min-height:70px !important;
+    padding:12px 11px !important;
+  }
+  .schedule-time{
+    font-size:15px !important;
+    line-height:1.15 !important;
+    white-space:nowrap !important;
+  }
+  .schedule-main strong{font-size:13.5px !important;line-height:1.25 !important}
+  .schedule-main span{font-size:10.5px !important;line-height:1.42 !important}
+  .demo-strip,.change-note{font-size:10.5px !important;line-height:1.45 !important}
+
+  /* Safety list readability. */
+  .safety-tabs button{font-size:12px !important;min-height:46px}
+  .safety-item{padding:15px 2px !important;gap:14px !important}
+  .safety-item .list-icon{width:50px !important;height:50px !important}
+  .safety-item .list-icon svg{width:28px !important;height:28px !important}
+  .safety-item .item-main strong{font-size:14.5px !important;line-height:1.25 !important}
+  .safety-item .item-main span{font-size:11px !important;line-height:1.48 !important}
+  .safety-chevron{font-size:23px !important}
+
+  /* Emergency list readability and fixed-header clearance. */
+  .emergency-page .emergency-alert{margin-top:8px !important;padding:10px 11px !important}
+  .emergency-alert strong{font-size:12px !important}
+  .emergency-alert span:not(.emergency-alert-icon){font-size:10.5px !important;line-height:1.42 !important}
+  .emergency-page .contact-item{padding:15px 2px !important;gap:14px !important}
+  .emergency-page .contact-avatar{width:50px !important;height:50px !important}
+  .emergency-page .contact-avatar svg{width:28px !important;height:28px !important}
+  .emergency-page .item-main strong{font-size:14px !important;line-height:1.25 !important}
+  .emergency-page .item-main span{font-size:11px !important;line-height:1.4 !important}
+  .emergency-page .contact-action{width:44px !important;height:44px !important}
+  .emergency-page .contact-action svg{width:22px !important;height:22px !important}
+
+  /* About rows. */
+  .about-page .about-hero{padding:14px !important}
+  .about-page .about-app-icon{width:78px !important;height:78px !important}
+  .about-page .about-hero-copy h2,.about-page .about-name{font-size:20px !important}
+  .about-page .about-version{font-size:11.5px !important}
+  .about-page .about-badge{font-size:9px !important}
+  .about-page .info-row{min-height:74px !important;padding:14px !important}
+  .about-page .info-row .list-icon{width:48px !important;height:48px !important}
+  .about-page .info-row .list-icon svg{width:24px !important;height:24px !important}
+  .about-page .info-copy strong{font-size:14px !important}
+  .about-page .info-copy span{font-size:10.5px !important;line-height:1.45 !important}
+  .about-page .info-chevron{font-size:24px !important}
+
+  /* Bottom bar: compact vertically, but with readable labels/icons. */
+  .bottom-nav{
+    height:calc(56px + env(safe-area-inset-bottom)) !important;
+    min-height:56px !important;
+    padding:0 6px calc(env(safe-area-inset-bottom)) !important;
+  }
+  .nav-item{height:46px !important;min-height:46px !important;gap:1px !important;border-radius:10px}
+  .nav-item svg{width:22px !important;height:22px !important}
+  .nav-item small{font-size:9.5px !important;line-height:1.1 !important}
+
+  /* Keep content from being hidden behind the compact fixed bottom bar. */
+  body.schedule-view .page,
+  body.internal-view .page,
+  body.schedule-view .schedule-page,
+  body.internal-view .internal-page{
+    padding-bottom:calc(70px + env(safe-area-inset-bottom)) !important;
+  }
+}
