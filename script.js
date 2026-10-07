@@ -67,19 +67,26 @@ let remoteConfig={enabled:false,provider:"github-api",repository:"",branch:"main
 let syncMeta={status:"local",lastSync:null,version:null,message:"Using local reference data."};
 
 const icons={
- ferry:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14h16l-2 4H6l-2-4Z"/><path d="M7 14V9h10v5M9 9V6h6v3M12 3v3M4 18c1 .9 1 1.4 4 1.4S11 18.9 12 18c1 .9 1 1.4 4 1.4s3-.5 4-1.4"/><path d="M8 11h1M12 11h1M16 11h1"/></svg>`,
- shield:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.5-2.8 8.4-7 10-4.2-1.6-7-5.5-7-10V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>`,
- phone:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 4.8c.7-.7 1.7-.9 2.6-.5l2 1a2 2 0 0 1 .9 2.8l-1 1.7a15.4 15.4 0 0 0 3.1 3.1l1.7-1a2 2 0 0 1 2.8.9l1 2c.4.9.2 1.9-.5 2.6l-1.1 1.1c-.8.8-2 1.1-3.1.7A17.2 17.2 0 0 1 5.1 9c-.4-1.1-.1-2.3.7-3.1l.8-1.1Z"/></svg>`,
- info:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7h.01"/></svg>`,
- cloudOff:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 4 16 16"/><path d="M7 18h10a4 4 0 0 0 1.2-7.8A6 6 0 0 0 7.5 7.1 4 4 0 0 0 7 18Z"/></svg>`,
+ home:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 10.5 8.5-7 8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg>`,
+ ferry:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13.5h16l-2.2 4H6.2Z"/><path d="M7 13.5V8.2h10v5.3M9 8.2V5.6h6v2.6M12 3v2.6"/><path d="M8 10.4h1M11.5 10.4h1M15 10.4h1"/><path d="M4 18.2c1 .8 2.1 1.2 3.4 1.2s2.4-.4 3.4-1.2c1 .8 2.1 1.2 3.4 1.2s2.4-.4 3.4-1.2c1 .8 2.1 1.2 3.4 1.2"/></svg>`,
+ shield:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 19 6v5c0 4.4-2.8 8.5-7 10-4.2-1.5-7-5.6-7-10V6l7-3Z"/><path d="m9 12 2 2.1 4-4.2"/></svg>`,
+ phone:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.7 4.8c.7-.7 1.8-.9 2.7-.4l1.8 1a2 2 0 0 1 .9 2.8l-1 1.6a15.2 15.2 0 0 0 3 3l1.6-1a2 2 0 0 1 2.8.9l1 1.8c.5.9.3 2-.4 2.7l-1 1c-.8.8-2 1.1-3.1.7A17.3 17.3 0 0 1 5.1 9.7c-.4-1.1-.1-2.3.7-3.1l.9-.9Z"/></svg>`,
+ info:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7.2h.01"/></svg>`,
+ calendar:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 17h.01M12 17h.01"/></svg>`,
+ cloudOff:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 5 14 14"/><path d="M7 18h9.5a4.5 4.5 0 0 0 1.1-8.9A6 6 0 0 0 7.2 7.2"/><path d="M6 10.5A4.2 4.2 0 0 0 7 18"/></svg>`,
  alert:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 4 8 15H4L12 4Z"/><path d="M12 9v4M12 16h.01"/></svg>`,
- calendar:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>`,
- beach:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14"/><path d="M7 20c1-4 3-7 5-10 2 3 4 6 5 10"/><path d="M8 10c2-2 4-2 7-1 1 .3 2 .8 3 1.5"/></svg>`,
- police:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 18 6v4.5c0 4.1-2.5 7.4-6 9-3.5-1.6-6-4.9-6-9V6l6-3Z"/><path d="M9 10h6M10 13h4"/></svg>`,
- rescue:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8 8h8v8H8zM10 6v4M14 14v4M6 10h4M14 10h4"/></svg>`,
- coast:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16M5 15c2-2 3-3 5-3s3 1 5 0 2-2 4-3"/><path d="M12 5v7M9 8l3-3 3 3"/></svg>`,
- hospital:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"/><path d="M10 8h4v8h-4zM8 10h8v4H8z"/></svg>`,
- fire:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c4 0 7-3 7-7 0-4.3-3-6.4-4.8-9.2-.2 2-1.1 3.7-2.7 4.9C10.8 7.1 9.4 5.8 8.2 4.5 7.8 7.8 5 10 5 14c0 4 3 7 7 7Z"/><path d="M12 17c1.6 0 2.8-1.2 2.8-2.7 0-.9-.4-1.7-1.2-2.6-.2 1-.6 1.6-1.3 2.1-.3-1-.9-1.8-1.5-2.5-.2 1.9-1.1 2.7-1.1 3.6 0 1.2 1 2.1 2.3 2.1Z"/></svg>`
+ beach:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h16"/><path d="M9 20c.2-3.2 1.3-6 3-8.8 1.7 2.8 2.8 5.6 3 8.8"/><path d="M8 11.5c2.1-2.2 5.6-2.7 8.5-1.2l1.5.8"/><path d="M12 7v3.2"/></svg>`,
+ lifebuoy:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3"/><path d="m6.3 6.3 3.2 3.2M14.5 14.5l3.2 3.2M17.7 6.3l-3.2 3.2M9.5 14.5l-3.2 3.2"/></svg>`,
+ traveler:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="6" r="2.4"/><path d="M8.2 19.5 10 11l-3-1.8M10 11l3.3 2.4 3.1-1.6M11 13.7l-1.7 5.8M13.3 13.2 16 18.8"/></svg>`,
+ weather:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 14.5h11a3.5 3.5 0 0 0 .2-7 5.3 5.3 0 0 0-10.3 1A3 3 0 0 0 5 14.5Z"/><path d="M8 18h.01M12 18h.01M16 18h.01"/></svg>`,
+ bag:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1.2 12H4.8L6 8Z"/><path d="M9 8V6.8A2.8 2.8 0 0 1 11.8 4h.4A2.8 2.8 0 0 1 15 6.8V8"/></svg>`,
+ ticket:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6h14v12H5z"/><path d="M9 6v12M11.8 9h4M11.8 12h4M11.8 15h2"/></svg>`,
+ capacity:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="2.2"/><circle cx="15" cy="8" r="2.2"/><path d="M4.8 18c.3-3 2-4.5 4.2-4.5S12.9 15 13.2 18M10.8 18c.3-2.5 1.8-4 4.2-4s3.7 1.5 4 4"/></svg>`,
+ police:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 18 6v4.5c0 4.1-2.5 7.4-6 9-3.5-1.6-6-4.9-6-9V6l6-3Z"/><path d="M9 10h6M10.2 13h3.6"/><path d="M8.5 6.4h7"/></svg>`,
+ rescue:`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M8.5 8.5 15.5 15.5M15.5 8.5 8.5 15.5"/><circle cx="12" cy="12" r="2.2"/></svg>`,
+ coast:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18h16"/><path d="M7 15c1.3-2.4 2.9-3.6 5-3.6s3.7 1.2 5 3.6"/><path d="M12 5v6M9 8l3-3 3 3"/></svg>`,
+ hospital:`<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="1.5"/><path d="M10 8h4v3h3v4h-3v3h-4v-3H7v-4h3V8Z"/></svg>`,
+ fire:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21c4.2 0 7-3 7-7 0-4.5-3.2-6.3-4.9-9.1-.3 2-1.2 3.4-2.8 4.8C10.6 7.2 9.5 6 8.5 4.8 7.9 8 5 10.4 5 14c0 4 2.8 7 7 7Z"/><path d="M12 17.5c1.4 0 2.5-1.1 2.5-2.5 0-1-.5-1.8-1.2-2.5-.2.9-.6 1.5-1.3 2-.3-.8-.8-1.4-1.3-2.1-.2 1.6-.9 2.4-.9 3.1 0 1.1.9 2 2.2 2Z"/></svg>`
 };
 
 function setConnection(){
@@ -144,7 +151,7 @@ function schedulesPage(){
     ${internalHeader("Ferry Schedules","calendar")}
     <input id="scheduleDatePicker" class="visually-hidden-input" type="date" value="${inputDateValue(scheduleDate)}" aria-label="Choose schedule date">
     <div class="route-switch" aria-label="Ferry route"><button class="${scheduleDirection==="HAGNAYA → STA. FE"?"active":""}" data-direction="HAGNAYA → STA. FE" type="button">HAGNAYA → STA. FE</button><button class="${scheduleDirection==="STA. FE → HAGNAYA"?"active":""}" data-direction="STA. FE → HAGNAYA" type="button">STA. FE → HAGNAYA</button></div>
-    <div class="schedule-date-row"><button class="date-nav" data-date-shift="-1" type="button" aria-label="Previous date"><svg viewBox="0 0 24 24"><path d="m14 6-6 6 6 6"/></svg></button><div class="schedule-date">${icons.calendar}<span>${formatScheduleDate(scheduleDate)}</span></div><button class="date-nav" data-date-shift="1" type="button" aria-label="Next date"><svg viewBox="0 0 24 24"><path d="m10 6 6 6-6 6"/></svg></button></div>
+    <div class="schedule-date-row"><button class="date-nav" data-date-shift="-1" type="button" aria-label="Previous date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button><div class="schedule-date">${icons.calendar}<span>${formatScheduleDate(scheduleDate)}</span></div><button class="date-nav" data-date-shift="1" type="button" aria-label="Next date"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button></div>
     <div class="demo-strip">${icons.alert}<div><strong>Reference schedule</strong> — primary source: ${scheduleMeta.primarySource||"verified public source"}; last checked ${scheduleMeta.lastChecked||"recently"}. Published times can differ across sources, so confirm the operator's latest sailing before travel.</div></div>
     <div class="schedule-list">${activeSchedule.length?activeSchedule.map(x=>`<div class="schedule-row"><div class="schedule-time">${x.time}</div><div class="schedule-main"><strong>${x.operator || "Super Shuttle Ferry"}</strong><span>${x.type}</span><span>${x.duration}</span></div></div>`).join(""):"<div class=\"schedule-empty\">No schedule entries are available for this date.</div>"}</div>
     <div class="change-note">${icons.info}<div>Schedule may change without prior notice due to weather conditions, sea travel restrictions, or operator updates.</div></div>
@@ -153,7 +160,8 @@ function schedulesPage(){
 
 function safetyPage(){
   const list=safetyTab==="sea"?safetySea:safetyBeach;
-  appContent.innerHTML=`<div class="page internal-page safety-page">${internalHeader("Safety Tips")}<div class="safety-tabs" role="tablist" aria-label="Safety categories"><button class="${safetyTab==="sea"?"active":""}" data-safety-tab="sea" type="button">SEA TRAVEL</button><button class="${safetyTab==="beach"?"active":""}" data-safety-tab="beach" type="button">BEACH SAFETY</button></div><div class="card safety-list">${list.map((x,i)=>`<div class="safety-item"><div class="list-icon">${i===2?icons.alert:(safetyTab==="beach"?icons.beach:icons.shield)}</div><div class="item-main"><strong>${x[0]}</strong><span>${x[1]}</span></div><div class="safety-chevron" aria-hidden="true">›</div></div>`).join("")}</div></div>`;
+  const safetyIcons=safetyTab==="sea"?[icons.traveler,icons.ferry,icons.lifebuoy,icons.capacity,icons.ticket,icons.alert]:[icons.beach,icons.beach,icons.traveler,icons.alert,icons.shield,icons.phone];
+  appContent.innerHTML=`<div class="page internal-page safety-page">${internalHeader("Safety Tips")}<div class="safety-tabs" role="tablist" aria-label="Safety categories"><button class="${safetyTab==="sea"?"active":""}" data-safety-tab="sea" type="button">SEA TRAVEL</button><button class="${safetyTab==="beach"?"active":""}" data-safety-tab="beach" type="button">BEACH SAFETY</button></div><div class="card safety-list">${list.map((x,i)=>`<div class="safety-item"><div class="list-icon">${safetyIcons[i]||icons.shield}</div><div class="item-main"><strong>${x[0]}</strong><span>${x[1]}</span></div><div class="safety-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></div></div>`).join("")}</div></div>`;
 }
 
 function emergencyPage(){

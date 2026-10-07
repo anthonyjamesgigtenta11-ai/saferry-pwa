@@ -1301,3 +1301,17 @@ body.menu-open{overflow:hidden}
   .menu-link{min-height:52px;font-size:13px}
   .menu-link-icon{width:34px;height:34px;font-size:18px}
 }
+
+/* v25 custom icon/branding refinement */
+.menu-link-icon svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.safety-chevron svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.about-app-icon{object-fit:contain;background:#F8FCFF;border:1px solid #DCE7F0;padding:0}
+
+@media (max-width:699px){
+  .feature-icon{box-shadow:inset 0 0 0 1px rgba(24,139,214,.04)}
+  .feature-icon svg{stroke-width:1.9 !important}
+  .menu-link-icon svg{width:21px;height:21px}
+  .safety-item .list-icon svg,.emergency-page .list-icon svg{width:26px;height:26px}
+  .contact-action svg{width:22px;height:22px}
+  .schedule-time{font-variant-numeric:tabular-nums;letter-spacing:-.2px}
+}

@@ -1,4 +1,4 @@
-const CACHE="saferry-v22";
+const CACHE="saferry-v25";
 const DATA_CACHE="saferry-data-v21";
 const APP_SHELL=[
   "./",
