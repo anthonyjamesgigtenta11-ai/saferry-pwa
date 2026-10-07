@@ -1,0 +1,75 @@
+{
+  "status": "reference",
+  "lastChecked": "2026-10-07",
+  "note": "These are general safety reminders based on Philippine maritime guidance and local disaster-risk guidance. Always follow current instructions from ferry crews, authorities, weather advisories, and lifeguards.",
+  "seaTravel": [
+    [
+      "Plan Ahead",
+      "Check the operator schedule and arrive at the port early enough for boarding."
+    ],
+    [
+      "Use Authorized Vessels",
+      "Use authorized passenger vessels and follow port and crew instructions."
+    ],
+    [
+      "Wear Your Life Jacket",
+      "Follow the vessel's life-jacket instructions, especially on open decks."
+    ],
+    [
+      "Respect Passenger Capacity",
+      "Do not board an overcrowded vessel or a trip that exceeds its authorized passenger capacity."
+    ],
+    [
+      "Check Passenger Details",
+      "Make sure ticket and passenger-manifest details are correct before boarding."
+    ],
+    [
+      "Follow Current Advisories",
+      "Follow the ferry operator, Philippine Coast Guard, and weather/port advisories."
+    ]
+  ],
+  "beachSafety": [
+    [
+      "Choose a Safe Area",
+      "Use designated or monitored swimming areas and follow warning signs and local safety notices."
+    ],
+    [
+      "Look for Lifeguards",
+      "Prefer areas with lifeguards and accessible life-saving equipment when available."
+    ],
+    [
+      "Stay With Others",
+      "Do not swim alone; adults should closely supervise children and vulnerable swimmers."
+    ],
+    [
+      "Avoid Hazard Areas",
+      "Stay away from marked danger areas and zones used by anchored or moving watercraft."
+    ],
+    [
+      "Do Not Swim Impaired",
+      "Do not swim while drunk or otherwise unable to respond safely to changing conditions."
+    ],
+    [
+      "Keep Emergency Contacts Ready",
+      "Keep 911 and relevant local emergency contacts accessible before entering the water."
+    ]
+  ],
+  "sources": [
+    {
+      "name": "MARINA — Strict Compliance with Life-Saving Appliance Requirements",
+      "url": "https://marina.gov.ph/2026/06/06/marina-calls-for-strict-compliance-with-life-saving-appliance-requirements/"
+    },
+    {
+      "name": "MARINA Advisory No. 2026-04",
+      "url": "https://marina.gov.ph/wp-content/uploads/2026/02/MARINA-Advisory-No.2026-04.pdf"
+    },
+    {
+      "name": "MARINA — Strict safety measures on passenger motorboats/bancas",
+      "url": "https://marina.gov.ph/wp-content/uploads/2022/06/MA-2023-27.pdf"
+    },
+    {
+      "name": "Iloilo City CDRRMO — beachgoer reminders",
+      "url": "https://cdrrmo.iloilocity.gov.ph/resources/disaster-preparedness/pahanumdom-sa-mga-beachgoers/"
+    }
+  ]
+}

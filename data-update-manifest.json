@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "version": "2026.10.07.1",
+  "lastUpdated": "2026-10-07",
+  "sourcePolicy": "Use the official ferry-operator or government source listed for each dataset as the primary reference. Do not silently merge conflicting schedules. Reconfirm time-sensitive information before critical travel or emergency use.",
+  "files": {
+    "schedules": "schedules.json",
+    "safety": "safety-tips.json",
+    "emergency": "emergency-contacts.json"
+  }
+}
