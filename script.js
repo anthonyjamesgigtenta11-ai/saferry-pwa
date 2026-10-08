@@ -1,3 +1,4 @@
+const startupSplash=document.getElementById("startupSplash");
 const appContent=document.getElementById("appContent");
 const navItems=document.querySelectorAll(".nav-item");
 const menuButton=document.getElementById("menuButton");
@@ -154,8 +155,9 @@ function home(){
   <div class="page home-page">
     <div class="offline-status" aria-live="polite"></div>
     <section class="welcome-card" aria-label="Saferry welcome">
-      <div class="welcome-copy"><h2>Hello, Traveler!</h2><p>Plan ahead. Travel safe.<br>Enjoy Bantayan Island!</p></div>
-      <svg class="hero-illustration" viewBox="0 0 190 108" role="img" aria-label="Ferry and island illustration"><circle cx="151" cy="25" r="10" fill="#CBE5F6"/><path d="M118 51c13-6 25-6 37 0 8-4 16-5 24-1 6 3 9 7 10 11H108c1-5 4-8 10-10Z" fill="#D8ECF9"/><path d="M86 70c18-9 41-9 59 0 11-5 23-5 33 1 4 2 8 5 10 8H76c2-4 5-7 10-9Z" fill="#C8E5F5"/><path d="M58 78h118" stroke="#AFD5EC" stroke-width="2" stroke-linecap="round"/><path d="M72 62h65l-8 15H78L72 62Z" fill="#0D2D52"/><path d="M88 55h33v7H88z" fill="#0D2D52"/><path d="M96 49h17v6H96z" fill="#0D2D52"/><path d="M104 44h3v5h-3z" fill="#0D2D52"/><path d="M91 68h6v5h-6zM105 68h6v5h-6zM119 68h6v5h-6z" fill="#EAF5FF"/><path d="M54 89c14 0 19 2 30 2 10 0 16-2 25-2 11 0 17 3 26 3 10 0 16-2 28-2 8 0 13 1 18 2" fill="none" stroke="#8CC5E8" stroke-width="2.5" stroke-linecap="round"/><path d="M147 73c4-10 5-18 4-24" fill="none" stroke="#7DBB5C" stroke-width="2" stroke-linecap="round"/><path d="M151 49c-6-3-9-7-11-11M151 51c6-5 10-7 14-7M151 55c-4-4-8-5-12-5M151 54c5-3 9-3 13-2" fill="none" stroke="#7DBB5C" stroke-width="2" stroke-linecap="round"/></svg>
+      <div class="welcome-copy"><div class="welcome-eyebrow">WELCOME ABOARD</div><h2>Hello, Traveler!</h2><p>Plan ahead. Travel safe.<br>Enjoy Bantayan Island!</p></div>
+      <div class="welcome-visual"><img src="icons/icon-192.png" alt="Saferry 3D ferry icon" class="welcome-3d-icon"><div class="welcome-wave" aria-hidden="true"></div></div>
+      <svg class="hero-illustration" viewBox="0 0 190 108" aria-hidden="true"><circle cx="151" cy="25" r="10" fill="#CBE5F6"/><path d="M118 51c13-6 25-6 37 0 8-4 16-5 24-1 6 3 9 7 10 11H108c1-5 4-8 10-10Z" fill="#D8ECF9"/><path d="M86 70c18-9 41-9 59 0 11-5 23-5 33 1 4 2 8 5 10 8H76c2-4 5-7 10-9Z" fill="#C8E5F5"/><path d="M58 78h118" stroke="#AFD5EC" stroke-width="2" stroke-linecap="round"/><path d="M72 62h65l-8 15H78L72 62Z" fill="#0D2D52"/><path d="M88 55h33v7H88z" fill="#0D2D52"/><path d="M96 49h17v6H96z" fill="#0D2D52"/><path d="M104 44h3v5h-3z" fill="#0D2D52"/><path d="M91 68h6v5h-6zM105 68h6v5h-6zM119 68h6v5h-6z" fill="#EAF5FF"/><path d="M54 89c14 0 19 2 30 2 10 0 16-2 25-2 11 0 17 3 26 3 10 0 16-2 28-2 8 0 13 1 18 2" fill="none" stroke="#8CC5E8" stroke-width="2.5" stroke-linecap="round"/><path d="M147 73c4-10 5-18 4-24" fill="none" stroke="#7DBB5C" stroke-width="2" stroke-linecap="round"/><path d="M151 49c-6-3-9-7-11-11M151 51c6-5 10-7 14-7M151 55c-4-4-8-5-12-5M151 54c5-3 9-3 13-2" fill="none" stroke="#7DBB5C" stroke-width="2" stroke-linecap="round"/></svg>
     </section>
     <div class="section-label">MAIN FEATURES</div>
     <section class="feature-grid">
@@ -512,7 +514,17 @@ async function loadData(){
   }
 }
 
-if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=28",{updateViaCache:"none"}).catch(console.error);});}
+function finishStartupSplash(){
+  if(!startupSplash)return;
+  startupSplash.classList.add("is-hidden");
+  window.setTimeout(()=>startupSplash.remove(),420);
+}
+
+window.addEventListener("load",()=>{
+  window.setTimeout(finishStartupSplash,650);
+});
+
+if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=31",{updateViaCache:"none"}).catch(console.error);});}
 
 render();
 loadData();

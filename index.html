@@ -11,16 +11,29 @@
   <meta name="apple-mobile-web-app-title" content="Saferry">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=28">
+  <link rel="stylesheet" href="style.css?v=31">
   <title>Saferry</title>
 </head>
 <body>
+<div class="startup-splash" id="startupSplash" aria-label="Saferry loading screen">
+  <div class="startup-splash-glow" aria-hidden="true"></div>
+  <img src="icons/splash-3d.png" alt="Saferry 3D app icon" class="startup-splash-icon">
+  <div class="startup-splash-title">SAFERRY</div>
+  <div class="startup-splash-tagline">Travel Safe. Arrive Safe.</div>
+  <div class="startup-splash-wave" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="startup-splash-loading"><i></i><span>Loading Saferry…</span></div>
+</div>
 <div class="app">
   <header class="app-header" id="homeHeader">
     <button class="icon-button" id="menuButton" type="button" aria-label="Open menu">
       <span class="hamburger" aria-hidden="true"><i></i><i></i><i></i></span>
     </button>
-    <div class="brand-title">Saferry</div>
+    <div class="brand-lockup" aria-label="Saferry">
+      <img src="icons/icon-192.png" alt="" class="brand-logo">
+      <div class="brand-copy"><strong>Saferry</strong><span>Travel Safe. Arrive Safe.</span></div>
+    </div>
     <div class="header-spacer" aria-hidden="true"></div>
   </header>
 
@@ -62,6 +75,6 @@
   </nav>
 </div>
 
-<script src="script.js?v=28"></script>
+<script src="script.js?v=31"></script>
 </body>
 </html>
