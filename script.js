@@ -1,4 +1,7 @@
 const startupSplash=document.getElementById("startupSplash");
+const onboardingScreen=document.getElementById("onboardingScreen");
+const onboardingStart=document.getElementById("onboardingStart");
+const onboardingSkip=document.getElementById("onboardingSkip");
 const appContent=document.getElementById("appContent");
 const navItems=document.querySelectorAll(".nav-item");
 const menuButton=document.getElementById("menuButton");
@@ -66,6 +69,9 @@ let safetyTab="sea";
 let deferredInstallPrompt=null;
 let remoteConfig={enabled:false,provider:"github-api",repository:"",branch:"main",manifestPath:"data-update-manifest.json",manifestUrl:"",refreshIntervalMinutes:60};
 let syncMeta={status:"local",lastSync:null,version:null,message:"Using local reference data."};
+let connectionState="checking";
+let connectionProbePromise=null;
+const ONBOARDING_KEY="saferry.onboarding.v32";
 
 const icons={
  home:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 10.5 8.5-7 8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg>`,
@@ -120,10 +126,40 @@ const icons={
 function setConnection(){
   const existing=document.querySelector(".offline-status");
   if(!existing)return;
-  existing.innerHTML=navigator.onLine
-    ? `<span class="status-dot"></span><span>ONLINE</span>`
-    : `${icons.cloudOff}<span>OFFLINE MODE</span>`;
-  existing.classList.toggle("is-offline",!navigator.onLine);
+  if(connectionState==="online") existing.innerHTML=`<span class="status-dot"></span><span>ONLINE</span>`;
+  else if(connectionState==="offline") existing.innerHTML=`${icons.cloudOff}<span>OFFLINE MODE</span>`;
+  else existing.innerHTML=`<span class="status-dot is-checking"></span><span>CHECKING CONNECTION</span>`;
+  existing.classList.toggle("is-offline",connectionState!=="online");
+  existing.classList.toggle("is-checking",connectionState==="checking");
+}
+
+async function probeInternetConnection(){
+  if(connectionProbePromise)return connectionProbePromise;
+  connectionProbePromise=(async()=>{
+    if(navigator.onLine===false){
+      connectionState="offline";setConnection();return false;
+    }
+    if(!remoteSyncConfigured()){
+      connectionState=navigator.onLine===true?"online":"checking";setConnection();return connectionState==="online";
+    }
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),4500);
+    try{
+      const probeUrl=githubRawFileUrl(remoteConfig.manifestPath || "data-update-manifest.json");
+      const response=await fetch(probeUrl,{cache:"no-store",signal:controller.signal,headers:{Accept:"application/json"}});
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      connectionState="online";
+      return true;
+    }catch(error){
+      connectionState="offline";
+      return false;
+    }finally{
+      clearTimeout(timer);
+      connectionProbePromise=null;
+      setConnection();
+    }
+  })();
+  return connectionProbePromise;
 }
 
 function activeNav(route){const key=route==="safety-detail"?"safety":route==="about-detail"?"about":route;navItems.forEach(n=>n.classList.toggle("active",n.dataset.route===key));}
@@ -269,6 +305,9 @@ function applyDataBundle(bundle,source="local"){
   if(source==="remote"){
     syncMeta={status:"synced",lastSync:new Date().toISOString(),version:manifest?.version || null,message:`Online data synchronized${manifest?.version?` • ${manifest.version}`:""}.`};
   }
+  if(source==="cached"){
+    syncMeta={status:"cached",lastSync:syncMeta.lastSync,version:manifest?.version || null,message:`Offline — using saved data${manifest?.version?` • ${manifest.version}`:""}.`};
+  }
 }
 
 function storeRemoteBundle(bundle){
@@ -363,7 +402,7 @@ function remoteSyncConfigured(){
 }
 
 function shouldAutoSync(){
-  if(!remoteSyncConfigured() || !navigator.onLine)return false;
+  if(!remoteSyncConfigured() || connectionState!=="online")return false;
   const last=localStorage.getItem("saferry.remote.syncedAt");
   if(!last)return true;
   const ageMinutes=(Date.now()-Date.parse(last))/60000;
@@ -377,8 +416,9 @@ async function syncRemoteData({manual=false}={}){
     if(manual)window.alert("Online updates are not connected. Check data/remote-config.json and make sure the GitHub repository is configured.");
     return false;
   }
-  if(!navigator.onLine){
-    syncMeta={status:"offline",lastSync:syncMeta.lastSync,version:syncMeta.version,message:"Offline — using the latest available local data."};
+  const reachable=await probeInternetConnection();
+  if(!reachable){
+    syncMeta={status:"offline",lastSync:syncMeta.lastSync,version:syncMeta.version,message:`Offline — using the latest available local data${syncMeta.version?` • ${syncMeta.version}`:""}.`};
     if(currentRoute==="about")render();
     if(manual)window.alert("Saferry is offline. The latest available data is being used.");
     return false;
@@ -406,12 +446,14 @@ async function syncRemoteData({manual=false}={}){
     if(!validScheduleData(schedules) || !validSafetyData(safety) || !validEmergencyData(emergency))throw new Error("Remote data failed basic validation.");
     const bundle={manifest,schedules,safety,emergency};
     storeRemoteBundle(bundle);
+    connectionState="online";
     applyDataBundle(bundle,"remote");
     if(currentRoute!=="home")render();
     return true;
   }catch(error){
     const detail=String(error?.message || error || "Unknown error");
-    syncMeta={status:"error",lastSync:syncMeta.lastSync,version:syncMeta.version,message:"Online refresh failed — using the latest available local data."};
+    await probeInternetConnection();
+    syncMeta={status:"error",lastSync:syncMeta.lastSync,version:syncMeta.version,message:`Online refresh failed — using the latest available local data${syncMeta.version?` • ${syncMeta.version}`:""}.`};
     console.warn("Saferry online data refresh failed.",error);
     if(currentRoute==="about")render();
     if(manual)window.alert(`Saferry could not refresh the online data. The latest available local data remains in use.
@@ -483,7 +525,10 @@ document.addEventListener("change",e=>{
   if(picker && picker.value){const [y,m,d]=picker.value.split("-").map(Number);scheduleDate=new Date(y,m-1,d);schedulesPage();}
 });
 
-addEventListener("online",()=>{setConnection();if(remoteConfig.enabled)syncRemoteData();});addEventListener("offline",()=>{setConnection();});
+addEventListener("online",async()=>{connectionState="checking";setConnection();await probeInternetConnection();if(remoteConfig.enabled && connectionState==="online")syncRemoteData();});
+addEventListener("offline",()=>{connectionState="offline";setConnection();});
+addEventListener("focus",()=>{if(remoteConfig.enabled)probeInternetConnection();});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden && remoteConfig.enabled)probeInternetConnection();});
 
 async function loadData(){
   try{
@@ -499,12 +544,13 @@ async function loadData(){
 
     const storedRemote=readRemoteBundle();
     if(storedRemote?.schedules && storedRemote?.safety && storedRemote?.emergency){
-      applyDataBundle(storedRemote,"remote");
+      applyDataBundle(storedRemote,"cached");
       const storedAt=localStorage.getItem("saferry.remote.syncedAt");
       syncMeta.lastSync=storedAt || syncMeta.lastSync;
     }
 
     await loadRemoteConfig();
+    await probeInternetConnection();
     if(remoteConfig.enabled && shouldAutoSync()) await syncRemoteData();
     if(!remoteConfig.enabled && syncMeta.status==="local") syncMeta.message="Using verified local reference data.";
     if(currentRoute!=="home")render();
@@ -514,6 +560,25 @@ async function loadData(){
   }
 }
 
+function showOnboardingIfNeeded(){
+  if(!onboardingScreen)return;
+  let seen=false;
+  try{seen=localStorage.getItem(ONBOARDING_KEY)==="seen";}catch(error){}
+  if(seen){onboardingScreen.hidden=true;return;}
+  onboardingScreen.hidden=false;
+  requestAnimationFrame(()=>onboardingScreen.classList.add("is-visible"));
+}
+
+function closeOnboarding(){
+  if(!onboardingScreen)return;
+  try{localStorage.setItem(ONBOARDING_KEY,"seen");}catch(error){}
+  onboardingScreen.classList.remove("is-visible");
+  window.setTimeout(()=>{onboardingScreen.hidden=true;},360);
+}
+
+if(onboardingStart)onboardingStart.addEventListener("click",closeOnboarding);
+if(onboardingSkip)onboardingSkip.addEventListener("click",closeOnboarding);
+
 function finishStartupSplash(){
   if(!startupSplash)return;
   startupSplash.classList.add("is-hidden");
@@ -521,10 +586,13 @@ function finishStartupSplash(){
 }
 
 window.addEventListener("load",()=>{
-  window.setTimeout(finishStartupSplash,650);
+  window.setTimeout(()=>{
+    finishStartupSplash();
+    window.setTimeout(showOnboardingIfNeeded,380);
+  },650);
 });
 
-if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=31",{updateViaCache:"none"}).catch(console.error);});}
+if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=32",{updateViaCache:"none"}).catch(console.error);});}
 
 render();
 loadData();

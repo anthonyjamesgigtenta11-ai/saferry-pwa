@@ -11,7 +11,7 @@
   <meta name="apple-mobile-web-app-title" content="Saferry">
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css?v=31">
+  <link rel="stylesheet" href="style.css?v=32">
   <title>Saferry</title>
 </head>
 <body>
@@ -25,6 +25,23 @@
   </div>
   <div class="startup-splash-loading"><i></i><span>Loading Saferry…</span></div>
 </div>
+<section class="onboarding-screen" id="onboardingScreen" aria-label="Saferry onboarding" hidden>
+  <button class="onboarding-skip" id="onboardingSkip" type="button">Skip</button>
+  <div class="onboarding-scene" aria-hidden="true"></div>
+  <div class="onboarding-top-brand">
+    <img src="icons/splash-3d.png" alt="" class="onboarding-icon">
+  </div>
+  <div class="onboarding-card">
+    <div class="onboarding-dots" aria-hidden="true"><span class="active"></span><span></span><span></span></div>
+    <h1>Welcome to Saferry</h1>
+    <p>Your offline travel companion for safe trips to and from Bantayan Island.</p>
+    <div class="onboarding-feature-row">
+      <span><b>Ferry schedules</b> Check trip references anytime.</span>
+      <span><b>Safety guidance</b> Practical sea and beach reminders.</span>
+    </div>
+    <button class="onboarding-start" id="onboardingStart" type="button">Get Started</button>
+  </div>
+</section>
 <div class="app">
   <header class="app-header" id="homeHeader">
     <button class="icon-button" id="menuButton" type="button" aria-label="Open menu">
@@ -75,6 +92,6 @@
   </nav>
 </div>
 
-<script src="script.js?v=31"></script>
+<script src="script.js?v=32"></script>
 </body>
 </html>

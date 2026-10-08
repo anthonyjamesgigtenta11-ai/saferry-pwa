@@ -1,16 +1,17 @@
-const CACHE="saferry-v31";
+const CACHE="saferry-v32";
 const DATA_CACHE="saferry-data-v23";
 const APP_SHELL=[
   "./",
   "./index.html",
-  "./style.css?v=31",
-  "./script.js?v=31",
+  "./style.css?v=32",
+  "./script.js?v=32",
   "./manifest.json",
   "./data/remote-config.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/icon-1024.png",
-  "./icons/splash-3d.png"
+  "./icons/splash-3d.png",
+  "./icons/splash-background-3d.jpg"
 ];
 const DATA_FILES=[
   "./data/schedules.json",
