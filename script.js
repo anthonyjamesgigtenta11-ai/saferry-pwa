@@ -69,9 +69,9 @@ let safetyTab="sea";
 let deferredInstallPrompt=null;
 let remoteConfig={enabled:false,provider:"github-api",repository:"",branch:"main",manifestPath:"data-update-manifest.json",manifestUrl:"",refreshIntervalMinutes:60};
 let syncMeta={status:"local",lastSync:null,version:null,message:"Using local reference data."};
-let connectionState="checking";
+let connectionState=(navigator.onLine===false?"offline":"online");
 let connectionProbePromise=null;
-const ONBOARDING_KEY="saferry.onboarding.v32";
+const ONBOARDING_KEY="saferry.onboarding.v34";
 
 const icons={
  home:`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3.5 10.5 8.5-7 8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg>`,
@@ -137,13 +137,18 @@ async function probeInternetConnection(){
   if(connectionProbePromise)return connectionProbePromise;
   connectionProbePromise=(async()=>{
     if(navigator.onLine===false){
-      connectionState="offline";setConnection();return false;
+      connectionState="offline";
+      setConnection();
+      return false;
     }
+    // Background-only probe. Never hold the app in a checking state.
     if(!remoteSyncConfigured()){
-      connectionState=navigator.onLine===true?"online":"checking";setConnection();return connectionState==="online";
+      connectionState="online";
+      setConnection();
+      return true;
     }
     const controller=new AbortController();
-    const timer=setTimeout(()=>controller.abort(),4500);
+    const timer=setTimeout(()=>controller.abort(),1200);
     try{
       const probeUrl=githubRawFileUrl(remoteConfig.manifestPath || "data-update-manifest.json");
       const response=await fetch(probeUrl,{cache:"no-store",signal:controller.signal,headers:{Accept:"application/json"}});
@@ -525,7 +530,7 @@ document.addEventListener("change",e=>{
   if(picker && picker.value){const [y,m,d]=picker.value.split("-").map(Number);scheduleDate=new Date(y,m-1,d);schedulesPage();}
 });
 
-addEventListener("online",async()=>{connectionState="checking";setConnection();await probeInternetConnection();if(remoteConfig.enabled && connectionState==="online")syncRemoteData();});
+addEventListener("online",()=>{connectionState="online";setConnection();probeInternetConnection().then(()=>{if(remoteConfig.enabled && connectionState==="online")syncRemoteData();});});
 addEventListener("offline",()=>{connectionState="offline";setConnection();});
 addEventListener("focus",()=>{if(remoteConfig.enabled)probeInternetConnection();});
 document.addEventListener("visibilitychange",()=>{if(!document.hidden && remoteConfig.enabled)probeInternetConnection();});
@@ -550,8 +555,11 @@ async function loadData(){
     }
 
     await loadRemoteConfig();
-    await probeInternetConnection();
-    if(remoteConfig.enabled && shouldAutoSync()) await syncRemoteData();
+    // Local data is ready first. Internet detection and remote sync happen in the background.
+    setConnection();
+    probeInternetConnection().then(()=>{
+      if(remoteConfig.enabled && shouldAutoSync() && connectionState==="online") syncRemoteData();
+    });
     if(!remoteConfig.enabled && syncMeta.status==="local") syncMeta.message="Using verified local reference data.";
     if(currentRoute!=="home")render();
   }catch(error){
@@ -586,13 +594,16 @@ function finishStartupSplash(){
 }
 
 window.addEventListener("load",()=>{
+  // Web splash is presentation-only; never wait for data/network before releasing the UI.
   window.setTimeout(()=>{
     finishStartupSplash();
     window.setTimeout(showOnboardingIfNeeded,380);
   },650);
 });
+// Hard fail-safe: even if a load handler is delayed, never trap interaction behind the splash.
+window.setTimeout(()=>{finishStartupSplash();},1800);
 
-if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=32",{updateViaCache:"none"}).catch(console.error);});}
+if("serviceWorker" in navigator){addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js?v=34",{updateViaCache:"none"}).catch(console.error);});}
 
 render();
 loadData();

@@ -1803,7 +1803,7 @@ body{
 .offline-status{transition:all .18s ease}
 .offline-status.is-checking{background:#F1F8FF;color:#47708F}
 .status-dot.is-checking{background:#76A8C9;box-shadow:0 0 0 4px rgba(118,168,201,.14);animation:saferryDotPulse 1s ease-in-out infinite}
-.startup-splash{isolation:isolate;background:#0D76C9 url("icons/splash-background-3d.jpg") center center/cover no-repeat;color:#fff;align-content:start;padding:clamp(68px,13vh,150px) 24px 78px;text-align:center}
+.startup-splash{isolation:isolate;background:#EAF6FF url("icons/splash-background-3d.jpg") center center/cover no-repeat;color:#fff;align-content:start;padding:clamp(68px,13vh,150px) 24px 78px;text-align:center}
 .startup-splash::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(6,63,113,.24) 0%,rgba(5,66,118,.04) 36%,rgba(4,54,102,.08) 56%,rgba(3,34,71,.66) 100%)}
 .startup-splash::after{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(circle at 50% 18%,rgba(255,255,255,.28),rgba(255,255,255,0) 36%)}
 .startup-splash-glow{width:68vw;max-width:300px;top:9%;transform:none;background:radial-gradient(circle,rgba(255,255,255,.27),rgba(255,255,255,0) 70%);filter:blur(4px)}
@@ -1836,3 +1836,11 @@ body{
 .onboarding-start:active{transform:translateY(1px)}
 @media(min-width:700px){.onboarding-card{max-width:430px;left:50%;right:auto;transform:translateX(-50%);width:calc(100% - 32px)}}
 @media(prefers-reduced-motion:reduce){.onboarding-screen{transition:none}}
+
+
+/* v34 interaction safety */
+.startup-splash{pointer-events:auto;}
+.startup-splash.is-hidden{pointer-events:none;}
+.onboarding-screen[hidden]{display:none !important;pointer-events:none !important;}
+.onboarding-screen.is-visible{pointer-events:auto;}
+.app, .bottom-nav{position:relative;}
