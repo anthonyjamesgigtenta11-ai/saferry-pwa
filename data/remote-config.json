@@ -4,6 +4,5 @@
   "repository": "anthonyjamesgigtenta11-ai/saferry-app",
   "branch": "main",
   "manifestPath": "data-update-manifest.json",
-  "manifestUrl": "",
   "refreshIntervalMinutes": 60
 }
